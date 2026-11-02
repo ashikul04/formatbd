@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FormatBD — Report, Thesis &amp; Presentation Formatting in Bangladesh</title>
-<meta name="description" content="Report, thesis and presentation formatting, cover design and Bijoy to Unicode conversion for government offices, NGOs and students in Bangladesh. Delivery in 24–72 hours.">
-<meta property="og:title" content="FormatBD — লেখা আপনার, সাজানো আমাদের">
+<title>FormatBD — Report &amp; Presentation Formatting in Bangladesh</title>
+<meta name="description" content="Report and presentation formatting for government offices, NGOs and students in Bangladesh. Also thesis formatting, cover design and Bijoy to Unicode conversion. Delivery in 24–72 hours.">
+<meta property="og:title" content="FormatBD — Report &amp; Presentation Formatting">
 <meta property="og:description" content="Govt reports, NGO reports, thesis &amp; presentation formatting · Bijoy → Unicode · Cover design">
 <meta property="og:image" content="assets/fb-cover.png">
 <link rel="icon" href="assets/favicon.png">
@@ -43,8 +43,8 @@
   .hero { background:var(--paper); border-bottom:1px solid var(--line); padding:64px 0 72px; }
   .hero .wrap { display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
   .hero-copy { max-width:580px; }
-  .hero h1 { font-size:clamp(38px, 5.2vw, 60px); line-height:1.2; margin:0 0 14px; }
-  .hero .tag { text-wrap:balance; font-size:20px; font-weight:500; line-height:1.45; color:var(--navy2); margin-bottom:18px; }
+  .hero h1 { font-family:'Poppins',sans-serif; font-weight:700; letter-spacing:-.025em; font-size:clamp(34px, 4.2vw, 50px); line-height:1.12; margin:0 0 14px; }
+  .hero .tag { font-family:'Tiro Bangla',serif; font-size:27px; line-height:1.4; color:var(--green); margin-bottom:16px; }
   .hero .lead { font-size:18px; line-height:1.8; color:#3C4550; }
   .hero .cta { display:flex; gap:12px; flex-wrap:wrap; margin:30px 0 32px; }
   .facts { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px 20px; font-size:14.5px; line-height:1.4; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; }
@@ -62,6 +62,12 @@
   .toc li.sub { padding-left:16px; color:var(--muted); }
   .sheet .stamp { position:absolute; right:22px; bottom:20px; display:flex; align-items:center; gap:6px; font-size:12px; color:var(--green); font-weight:600; }
   .sheet .stamp img { width:22px; height:22px; }
+  .slide { position:absolute; left:-64px; bottom:-34px; width:236px; aspect-ratio:16/9; background:var(--navy); border-radius:6px; padding:14px 16px 12px; box-shadow:0 14px 30px rgba(19,41,75,.28); display:flex; flex-direction:column; }
+  .slide .st { font-family:'Tiro Bangla',serif; color:#fff; font-size:14px; line-height:1.2; }
+  .slide .ss { color:#9FB0C8; font-size:10.5px; margin-bottom:auto; }
+  .slide .bars { display:flex; align-items:flex-end; gap:9px; height:48%; border-bottom:1px solid rgba(255,255,255,.25); }
+  .slide .bars i { flex:1; background:#2BC48A; border-radius:2px 2px 0 0; }
+  .slide .bars i:nth-child(odd) { background:#C4D0E2; }
 
   section { padding:72px 0; }
   .sh { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:30px; }
@@ -69,6 +75,11 @@
   .sh p { color:var(--muted); max-width:520px; }
   .alt { background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 
+  .main-svc { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:22px; }
+  .svc { background:var(--navy); color:#C9D3E3; border-radius:6px; padding:30px 30px 28px; }
+  .svc h3 { color:#fff; font-family:'Poppins',sans-serif; font-weight:600; font-size:24px; letter-spacing:-.01em; margin-bottom:8px; }
+  .svc p { font-size:16px; line-height:1.7; max-width:46ch; }
+  .svc .inc { margin-top:14px; font-size:14px; color:#9FE0C2; font-weight:600; }
   .sectors { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
   .sector { border:1px solid var(--line); border-top:4px solid var(--navy); border-radius:0; padding:24px; background:#fff; }
   .sector.ngo { border-top-color:var(--green); } .sector.stu { border-top-color:var(--amber); }
@@ -146,8 +157,9 @@
 
   @media (max-width:900px) {
     .hero .wrap, .ba, .order { grid-template-columns:1fr; }
-    .sheet { justify-self:center; }
-    .sectors, .plans, .perks { grid-template-columns:1fr; }
+    .sheet { justify-self:center; margin-bottom:30px; }
+    .slide { left:-10px; width:200px; }
+    .sectors, .plans, .perks, .main-svc { grid-template-columns:1fr; }
     .steps { grid-template-columns:1fr 1fr; } .step:nth-child(2) { border-right:0; } .step:nth-child(-n+2) { border-bottom:1px solid var(--line); }
     nav a:not(.btn) { display:none; }
     .facts { grid-template-columns:repeat(2, auto); }
@@ -155,7 +167,7 @@
   }
   @media (max-width:560px) {
     body { font-size:16px; }
-    .hero { padding:40px 0 48px; } .hero .tag { font-size:18px; } .facts { gap:14px 16px; }
+    .hero { padding:40px 0 48px; } .hero .tag { font-size:22px; } .facts { gap:14px 16px; }
     section { padding:52px 0; } .sh h2 { font-size:28px; }
     .steps, form, .promises { grid-template-columns:1fr; } .step { border-right:0; border-bottom:1px solid var(--line); }
     .util .hours { display:none; }
@@ -178,9 +190,9 @@
 
 <div class="hero"><div class="wrap">
   <div class="hero-copy">
-    <h1>লেখা আপনার,<br>সাজানো আমাদের।</h1>
-    <p class="tag">Report, thesis and presentation formatting, submission&#8209;ready the first time.</p>
-    <p class="lead">সরকারি দপ্তর, এনজিও আর শিক্ষার্থীদের জন্য বাংলা ও ইংরেজি নথি নির্দেশিকা মেনে সাজিয়ে দিই। সঙ্গে কভার ডিজাইন আর বিজয় থেকে ইউনিকোড রূপান্তর।</p>
+    <h1>Report &amp; Presentation Formatting</h1>
+    <p class="tag">লেখা আপনার, সাজানো আমাদের।</p>
+    <p class="lead">সরকারি দপ্তর, এনজিও আর শিক্ষার্থীদের প্রতিবেদন ও প্রেজেন্টেশন — বাংলা বা ইংরেজিতে, আপনার নির্দেশিকা মেনে জমা দেওয়ার উপযোগী করে সাজিয়ে দিই। থিসিস, কভার ডিজাইন আর বিজয় থেকে ইউনিকোড রূপান্তরও করি।</p>
     <div class="cta"><a class="btn" href="#order">Get a Free Quote</a><a class="btn line" href="#pricing">View Pricing</a></div>
     <div class="facts">
       <div><b>24–72 hrs</b>delivery</div>
@@ -207,11 +219,16 @@
       <li><span>পরিশিষ্ট</span><span></span><span>২৬</span></li>
     </ul>
     <div class="stamp"><img src="assets/logo-icon.svg" alt="">Formatted by FormatBD</div>
+    <div class="slide" aria-hidden="true"><div class="st">লক্ষ্যমাত্রা বনাম অর্জন</div><div class="ss">Slide 4 · Meeting presentation</div><div class="bars"><i style="height:45%"></i><i style="height:62%"></i><i style="height:70%"></i><i style="height:88%"></i><i style="height:80%"></i><i style="height:100%"></i></div></div>
   </div>
 </div></div>
 
 <section id="services"><div class="wrap">
-  <div class="sh"><h2>কাদের জন্য কাজ করি</h2><p>আমরা লিখি না, গবেষণাও করি না। আপনার লেখা নথি আপনার নির্দেশিকা অনুযায়ী নিখুঁতভাবে সাজিয়ে দিই।</p></div>
+  <div class="sh"><h2>আমাদের মূল কাজ</h2><p>আমরা লিখি না, গবেষণাও করি না। আপনার লেখা রিপোর্ট আর প্রেজেন্টেশন আপনার নির্দেশিকা অনুযায়ী নিখুঁতভাবে সাজিয়ে দিই।</p></div>
+  <div class="main-svc">
+    <div class="svc"><h3>Report Formatting</h3><p>Project, annual, donor and government reports. Styles, numbered headings, auto table of contents, tables, figures, annexes and a cover.</p><div class="inc">Word + print-ready PDF</div></div>
+    <div class="svc"><h3>Presentation Design</h3><p>Meeting, donor and defence decks. Clean slide layouts, charts redrawn from your data, consistent fonts in Bangla or English.</p><div class="inc">PowerPoint + PDF</div></div>
+  </div>
   <div class="sectors">
     <div class="sector"><div class="k">সরকারি দপ্তর ও প্রকল্প</div><h3>সরকারি নথি ও প্রতিবেদন</h3><ul class="dash">
       <li>প্রকল্প সমাপ্তি ও অগ্রগতি প্রতিবেদন</li><li>বিজয় (SutonnyMJ) থেকে ইউনিকোড রূপান্তর</li><li>প্রশিক্ষণ ম্যানুয়াল ও নির্দেশিকা</li><li>সভার প্রেজেন্টেশন</li><li>আনুষ্ঠানিক কোটেশন ও বিল</li></ul></div>
@@ -231,15 +248,6 @@
 <button role="tab" class="tab" data-seg="student" aria-selected="false">Students</button>
 </div>
 <div class="plans" data-seg="govt">
-<article class="plan">
-<h3>বিজয় থেকে ইউনিকোড</h3><div class="unit">প্রতি পৃষ্ঠা</div>
-<div class="price"><s>৳15</s> <b>৳10</b></div>
-<div class="save">Save ৳5 (33% off)</div><ul>
-<li>SutonnyMJ / বিজয়ের লেখা নির্ভুল ইউনিকোডে</li>
-<li>নিকস বা সোলায়মানলিপি ফন্টে</li>
-<li>বানান ও যুক্তবর্ণ যাচাই</li>
-<li>প্রথম ২০ পৃষ্ঠা ফ্রি</li>
-</ul><a class="btn line js-pkg" href="#order" data-pkg="বিজয় থেকে ইউনিকোড (৳10)">Choose Package</a></article>
 <article class="plan pop">
 <div class="flag">Most Popular</div>
 <h3>প্রতিবেদন / ম্যানুয়াল</h3><div class="unit">৪০ পৃষ্ঠা পর্যন্ত</div>
@@ -259,6 +267,15 @@
 <li>বাংলা ইউনিকোডে</li>
 <li>PowerPoint ও PDF</li>
 </ul><a class="btn line js-pkg" href="#order" data-pkg="সভার প্রেজেন্টেশন (৳5,000)">Choose Package</a></article>
+<article class="plan">
+<h3>বিজয় থেকে ইউনিকোড</h3><div class="unit">প্রতি পৃষ্ঠা</div>
+<div class="price"><s>৳15</s> <b>৳10</b></div>
+<div class="save">Save ৳5 (33% off)</div><ul>
+<li>SutonnyMJ / বিজয়ের লেখা নির্ভুল ইউনিকোডে</li>
+<li>নিকস বা সোলায়মানলিপি ফন্টে</li>
+<li>বানান ও যুক্তবর্ণ যাচাই</li>
+<li>প্রথম ২০ পৃষ্ঠা ফ্রি</li>
+</ul><a class="btn line js-pkg" href="#order" data-pkg="বিজয় থেকে ইউনিকোড (৳10)">Choose Package</a></article>
 </div><p class="plans-note" data-seg="govt">Extra page ৳250 · Cover ৳3,000 · Per slide ৳400 · Urgent delivery +30%</p>
 <div class="plans" data-seg="ngo" hidden>
 <article class="plan">
@@ -374,7 +391,7 @@
     <div class="full"><h2 style="font-size:28px">বিনামূল্যে কোটেশন</h2><p class="small">Fill in the form and WhatsApp opens with your details already typed. Send your file in the same chat.</p></div>
     <div><label for="f-name">Your name</label><input id="f-name" name="name" required></div>
     <div><label for="f-seg">You are</label><select id="f-seg" name="seg"><option>Government office / Project</option><option>NGO / INGO</option><option>Student</option><option>Other</option></select></div>
-    <div class="full"><label for="f-pkg">Package or type of work</label><input id="f-pkg" name="pkg" placeholder="e.g. Project report, Bijoy → Unicode, Thesis"></div>
+    <div class="full"><label for="f-pkg">Package or type of work</label><input id="f-pkg" name="pkg" placeholder="e.g. Project report, meeting presentation, thesis"></div>
     <div><label for="f-pages">Pages / slides (approx.)</label><input id="f-pages" name="pages" inputmode="numeric" placeholder="e.g. 80"></div>
     <div><label for="f-due">Needed by</label><input id="f-due" name="due" type="date"></div>
     <div class="full"><label for="f-org">Organisation / Department</label><input id="f-org" name="org"></div>
@@ -385,7 +402,7 @@
 
 <footer><div class="wrap">
   <div><span class="wm" style="color:#fff;font-size:22px">Format<b>BD</b></span><p style="margin-top:8px">সরকারি দপ্তর, এনজিও ও শিক্ষার্থীদের জন্য নথি ফরম্যাটিং, কভার ডিজাইন ও ইউনিকোড রূপান্তর। ঢাকা, বাংলাদেশ।</p></div>
-  <div><h4>Services</h4>Report formatting<br>Bijoy to Unicode<br>Covers and presentations</div>
+  <div><h4>Services</h4>Report formatting<br>Presentation design<br>Thesis, covers, Bijoy to Unicode</div>
   <div><h4>Contact</h4><a class="js-tel" href="#">01782-761981</a><br><a class="js-mail" href="#">formatbdteam@gmail.com</a><br><a class="js-fb" href="#">Facebook</a></div>
   <div class="en">We format and design — we never write your content. · © 2026 FormatBD</div>
 </div></footer>

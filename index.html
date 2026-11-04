@@ -120,6 +120,22 @@
   .earn-big strong { display:block; color:#fff; font-size:16px; margin-bottom:4px; }
   .earn ol { padding-left:20px; color:#3C4550; } .earn ol li { padding:3px 0; }
   .earn .ex { margin-top:16px; background:#FFF8E8; border:1px dashed #E2B65A; border-radius:6px; padding:12px 16px; font-size:15.5px; color:#5A4A2A; }
+  .kicker { display:inline-block; font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--green); margin-bottom:4px; }
+  .how b { color:var(--navy); }
+  .terms { margin-top:18px; border:1px solid var(--line); border-radius:6px; padding:12px 16px; background:#fff; }
+  .terms summary { font-size:16px; }
+  .terms ol { margin-top:10px; font-size:14.5px; color:#3C4550; } .terms li { padding:3px 0; }
+  .terms .upd { font-size:13px; color:var(--muted); margin-top:8px; }
+  label.chk { display:flex; gap:10px; align-items:flex-start; font-weight:500; color:#3C4550; }
+  label.chk input { width:auto; margin-top:6px; }
+  .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0; }
+  .stats div { background:#fff; border:1px solid var(--line); border-radius:6px; padding:10px 12px; font-size:13px; color:var(--muted); line-height:1.35; }
+  .stats b { display:block; font-family:'Poppins',sans-serif; font-size:20px; color:var(--navy); }
+  .stats .owe { border-color:var(--green); } .stats .owe b { color:var(--green); }
+  .kit { margin-top:12px; } .kit h4 { color:var(--navy); font-size:16px; margin-bottom:6px; }
+  .kit .post { background:#fff; border:1px dashed #C9C2B1; border-radius:6px; padding:10px 12px; font-size:14.5px; margin-bottom:8px; }
+  .kit .post p { margin-bottom:8px; white-space:pre-line; }
+  .kit button, .kit a.btn { margin:0 6px 4px 0; padding:6px 12px; font-size:13.5px; }
   .partner { display:grid; gap:16px; }
   .pbox { background:#EAF6F0; border:1px solid #B7E0CC; border-radius:6px; padding:22px 24px; }
   .pbox h3 { color:var(--green); font-size:21px; margin-bottom:6px; }
@@ -191,6 +207,7 @@
     .util .hours { display:none; }
     nav .btn { padding:8px 14px; }
     .chips { grid-template-columns:1fr; }
+    .stats { grid-template-columns:1fr 1fr; }
     .sheet { padding:24px 20px; }
   }
 </style>
@@ -282,41 +299,49 @@
 
 <section id="earn"><div class="wrap earn">
   <div>
+    <span class="kicker">FormatBD Partner Program</span>
     <h2 style="font-size:34px">Refer &amp; Earn</h2>
-    <p style="color:var(--muted);margin-top:6px">বন্ধু, ক্লাসমেট বা অফিসের কাউকে FormatBD-তে পাঠান — প্রতিটি order থেকে আয় করুন। Student, freelancer, office staff — যে কেউ join করতে পারেন, কোনো খরচ নেই।</p>
+    <p style="color:var(--muted);margin-top:6px">বন্ধু, ক্লাসমেট বা অফিসের কাউকে FormatBD-তে পাঠান — প্রতিটি paid order থেকে আয় করুন। Student, freelancer, office staff — যে কেউ apply করতে পারেন, কোনো খরচ নেই।</p>
     <div class="earn-big">
-      <div><b class="r-comm">20%</b><strong>আপনার commission</strong>আপনার code দিয়ে আসা প্রতিটি order-এর, bKash-এ</div>
-      <div><b class="r-cust">10%</b><strong>Customer-এর ছাড়</strong>আপনার code ব্যবহার করলে customer পাবেন সরাসরি ছাড়</div>
+      <div><b class="r-comm">20%</b><strong>আপনার commission</strong>আপনার code বা link দিয়ে আসা প্রতিটি paid order-এর</div>
+      <div><b class="r-cust">10%</b><strong>Customer-এর ছাড়</strong>আপনার code ব্যবহার করলে customer পান সরাসরি ছাড়</div>
     </div>
-    <ol>
-      <li>পাশের form পূরণ করে register করুন, তারপর <b>Partner WhatsApp group</b>-এ join করুন।</li>
-      <li>Approve হলে আপনার নিজের code তৈরি হয়ে যাবে (যেমন <b>RAFI07</b>) — "Check my code"-এ phone ও bKash দিয়ে দেখুন, group-এও জানানো হবে।</li>
-      <li>Code বা link batch group, Facebook বা অফিসে share করুন।</li>
-      <li>Customer full payment করলে <span class="r-days">৩</span> দিনের মধ্যে commission আপনার bKash-এ।</li>
+    <ol class="how">
+      <li><b>Apply করুন</b> — পাশের form, ২ মিনিট। তারপর Partner WhatsApp group-এ join করুন।</li>
+      <li><b>Approve হলে code পাবেন</b> — ২৪ ঘণ্টার মধ্যে review। Code ও link দেখা যাবে Partner Dashboard-এ।</li>
+      <li><b>Share করুন</b> — Dashboard-এ ready post, WhatsApp ও Facebook share button আছে।</li>
+      <li><b>Payment পান</b> — <span class="r-pay">প্রতি বৃহস্পতিবার bKash-এ (minimum ৳300)</span>।</li>
     </ol>
     <p class="ex r-ex">উদাহরণ: ৳12,000-এর office report → customer পান ৳1,200 ছাড়, আপনি পান ৳2,160।</p>
+    <details id="terms" class="terms"><summary>Partner Program Terms (নিয়মাবলি)</summary>
+<!--TERMS-->
+<ol><li>Commission: customer-এর <b>পুরো payment হওয়ার পর</b> order price-এর 20%। Advance বা অর্ধেক payment-এ commission হয় না।</li><li>Customer আপনার code দিলে বা আপনার link দিয়ে এসে 30 দিনের মধ্যে order করলে order-টি আপনার।</li><li>Payment প্রতি বৃহস্পতিবার bKash-এ, যখন পাওনা ৳300 বা বেশি। কম হলে পরের সপ্তাহে যোগ হবে।</li><li>Refund বা cancel হলে সেই order-এর commission বাতিল।</li><li>নিজের order-এ নিজের code চলবে না। এক customer-এর জন্য একটাই code।</li><li>Spam, ভুয়া review, ভুল দাম বা "আমরা thesis লিখে দিই" ধরনের দাবি করা যাবে না — FormatBD শুধু formatting ও design করে।</li><li>"FormatBD" নামে paid ad, page বা group খোলা যাবে না; নিজেকে FormatBD staff হিসেবে পরিচয় দেওয়া যাবে না।</li><li>নিয়ম বা commission বদলালে partner group-এ 7 দিন আগে জানানো হবে। Fraud বা নিয়ম ভাঙলে partnership বাতিল ও বাকি commission বাতিল।</li></ol>
+<!--/TERMS-->
+    </details>
   </div>
   <div class="partner">
   <form id="af">
-    <div class="full"><h3 style="font-size:24px">Register as a Referral Partner</h3><p class="small">Register করে Partner WhatsApp group-এ join করুন। ২৪ ঘণ্টার মধ্যে approve হলে code পাবেন।</p></div>
-    <div><label for="a-name">Your name</label><input id="a-name" name="name" required></div>
-    <div><label for="a-phone">WhatsApp number</label><input id="a-phone" name="phone" inputmode="tel" required></div>
-    <div><label for="a-bkash">bKash number (commission)</label><input id="a-bkash" name="bkash" inputmode="tel" required></div>
+    <div class="full"><h3 style="font-size:24px">Apply as a Partner</h3><p class="small">Approve হলে আপনার নিজের code ও share link তৈরি হবে — সব Partner Dashboard-এ।</p></div>
+    <div><label for="a-name">Your name</label><input id="a-name" name="name" required autocomplete="name"></div>
+    <div><label for="a-phone">WhatsApp number</label><input id="a-phone" name="phone" inputmode="tel" required autocomplete="tel"></div>
+    <div><label for="a-bkash">bKash number (payment)</label><input id="a-bkash" name="bkash" inputmode="tel" required></div>
     <div><label for="a-org">University / Office</label><input id="a-org" name="org"></div>
-    <div class="full"><label for="a-where">কোথায় share করবেন?</label><select id="a-where" name="where"><option>Batch / class group</option><option>Facebook group or page</option><option>Office / colleagues</option><option>Other</option></select></div>
-    <div class="full"><button class="btn" type="submit">Register</button> <span id="af-err" class="small" style="color:var(--red)"></span></div>
-    <p class="full small">নিয়ম: নিজের order-এ নিজের code চলবে না · Commission শুধু full payment হলে · Code ছাড়া আসা order-এ commission নেই।</p>
+    <div><label for="a-where">কোথায় share করবেন?</label><select id="a-where" name="where"><option>Batch / class group</option><option>Facebook group or page</option><option>Office / colleagues</option><option>YouTube / TikTok</option><option>Other</option></select></div>
+    <div><label for="a-aud">কতজনের কাছে পৌঁছাতে পারবেন?</label><select id="a-aud" name="audience"><option>Under 50</option><option>50–200</option><option>200–1,000</option><option>1,000+</option></select></div>
+    <div class="full"><label for="a-social">Facebook profile / page link (optional)</label><input id="a-social" name="social" placeholder="facebook.com/yourname"></div>
+    <label class="full chk"><input type="checkbox" id="a-terms" required> আমি <a href="#terms" class="js-terms">Partner Program Terms</a> পড়েছি ও মেনে নিচ্ছি।</label>
+    <div class="full"><button class="btn" type="submit">Apply Now</button> <span id="af-err" class="small" style="color:var(--red)"></span></div>
   </form>
   <div id="af-done" class="pbox" hidden>
-    <h3>✓ Registration পেয়েছি <span id="af-id"></span></h3>
-    <p id="af-msg">Approve হলে (সাধারণত ২৪ ঘণ্টার মধ্যে) আপনার code তৈরি হবে। নিচে "Check my code"-এ দেখতে পাবেন।</p>
+    <h3>✓ Application পেয়েছি <span id="af-id"></span></h3>
+    <p id="af-msg">২৪ ঘণ্টার মধ্যে review করে জানাব। এখনই Partner group-এ join করুন — approve হলে নিচের Partner Dashboard-এ আপনার code দেখতে পাবেন।</p>
     <a id="af-group" class="btn js-group" href="#" target="_blank" rel="noopener">Join Partner WhatsApp Group</a>
   </div>
   <form id="ps" class="pcheck">
-    <div class="full"><h3 style="font-size:20px">Already registered? Check my code</h3></div>
+    <div class="full"><h3 style="font-size:20px">Partner Dashboard</h3><p class="small">Code, link, আয় ও payment দেখুন — apply করার সময়ের WhatsApp ও bKash নম্বর দিন।</p></div>
     <div><label for="s-phone">WhatsApp number</label><input id="s-phone" inputmode="tel" required></div>
     <div><label for="s-bkash">bKash number</label><input id="s-bkash" inputmode="tel" required></div>
-    <div class="full"><button class="btn line" type="submit">Check my code</button></div>
+    <div class="full"><button class="btn line" type="submit">Open Dashboard</button></div>
     <div id="ps-out" class="full" aria-live="polite"></div>
   </form>
   </div>
@@ -395,7 +420,7 @@
 
 <script>
   // Contact details — written by ops/build.py from config.json
-  const C = { wa: "8801782761981", email: "formatbdteam@gmail.com", fb: "profile.php?id=61596278724692", sbUrl: "https://mepwncbscyceeyoxgvda.supabase.co", sbKey: "sb_publishable_hM7CJC9fcQ2uOZyHIxdnSQ_53WIUaNk", refPct: 10, group: "" };
+  const C = {"wa": "8801782761981", "email": "formatbdteam@gmail.com", "fb": "profile.php?id=61596278724692", "sbUrl": "https://mepwncbscyceeyoxgvda.supabase.co", "sbKey": "sb_publishable_hM7CJC9fcQ2uOZyHIxdnSQ_53WIUaNk", "refPct": 10, "commPct": 20, "cookieDays": 30, "payoutMin": 300, "payoutDay": "বৃহস্পতিবার", "group": "", "kit": ["Thesis / report-এর formatting নিয়ে টেনশন? 😅 FormatBD পুরো formatting করে দেয় — page number, table of contents, cover, references সব ঠিকঠাক। Student package ৳1,200 থেকে। আমার code {CODE} দিলে 10% ছাড়: {LINK}", "অফিস বা NGO-র report, annual report বা meeting presentation professional look-এ দরকার? FormatBD Bangla-English দুই ভাষাতেই কাজ করে, সময়মতো delivery না হলে 20% refund। Code {CODE} দিলে 10% ছাড়: {LINK}", "Banner, flyer, poster, social post বা certificate design লাগবে? FormatBD-তে design ৳500 থেকে, print-ready file দেয়। আমার code {CODE} দিয়ে 10% কম দামে order করুন: {LINK}"]};
   // Supabase (public key, insert-only tables): saves form submissions; skipped until build.py fills sbUrl/sbKey
   const sbCall = (path, body) => !(C.sbUrl && C.sbKey) ? Promise.resolve(null) :
     fetch(C.sbUrl + "/rest/v1/" + path, { method: "POST", keepalive: true, body: JSON.stringify(body),
@@ -435,48 +460,84 @@
     else if (r === false) { refOk.textContent = "এই code পাওয়া যায়নি — বানান দেখুন"; refOk.style.color = "var(--red)"; }
   };
   refIn.addEventListener("change", checkRef);
-  const ref = new URLSearchParams(location.search).get("ref");
-  if (ref) { refIn.value = ref.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12); checkRef(); }
-  // referral partners: register_partner / partner_status are the only partner calls the public key may make
+  // partner links: ?ref=CODE is remembered for C.cookieDays days, so a customer who comes back later still credits the partner
+  const store = { get: k => { try { return JSON.parse(localStorage.getItem(k)); } catch (x) { return null; } },
+                  set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (x) {} } };
+  const urlRef = (new URLSearchParams(location.search).get("ref") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12);
+  if (urlRef) store.set("fbd_ref", { code: urlRef, t: Date.now() });
+  const saved = store.get("fbd_ref");
+  if (saved && saved.code && Date.now() - saved.t < C.cookieDays * 864e5) { refIn.value = saved.code; checkRef(); }
+
+  // partner programme: register_partner / partner_dashboard are the only partner calls the public key may make
   const rpc = (fn, body) => fetch(C.sbUrl + "/rest/v1/rpc/" + fn, { method: "POST", body: JSON.stringify(body),
     headers: Object.assign({ apikey: C.sbKey, "Content-Type": "application/json" },
       C.sbKey.startsWith("eyJ") ? { Authorization: "Bearer " + C.sbKey } : {}) })
     .then(async r => { const j = await r.json(); if (!r.ok) throw new Error(j.message || r.status); return j; });
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => "&#" + c.charCodeAt(0) + ";");
+  const tk = n => "৳" + Math.round(n).toLocaleString("en-IN");
   document.querySelectorAll(".js-group").forEach(a => C.group ? a.href = C.group : a.hidden = true);
+  document.querySelectorAll(".js-terms").forEach(a => a.addEventListener("click", () => document.getElementById("terms").open = true));
+
   const af = document.getElementById("af");
   af.addEventListener("submit", async e => {
     e.preventDefault();
     const f = new FormData(af), v = k => (f.get(k) || "").trim(), err = document.getElementById("af-err");
     if (!C.sbUrl) {  // no database: fall back to a WhatsApp message
-      window.open(waLink(`Referral partner registration — FormatBD\nName: ${v("name")}\nWhatsApp: ${v("phone")}\nbKash: ${v("bkash")}\nUniversity / Office: ${v("org") || "-"}\nWill share in: ${v("where")}`), "_blank");
+      window.open(waLink(`Partner application — FormatBD\nName: ${v("name")}\nWhatsApp: ${v("phone")}\nbKash: ${v("bkash")}\nUniversity / Office: ${v("org") || "-"}\nShare in: ${v("where")} (${v("audience")})\nProfile: ${v("social") || "-"}`), "_blank");
       return;
     }
     err.textContent = "";
     try {
-      const r = await rpc("register_partner", { p_name: v("name"), p_phone: v("phone"), p_bkash: v("bkash"), p_org: v("org"), p_where: v("where") });
+      const r = await rpc("register_partner", { p_name: v("name"), p_phone: v("phone"), p_bkash: v("bkash"), p_org: v("org"),
+        p_where: v("where"), p_social: v("social"), p_audience: v("audience"), p_terms: document.getElementById("a-terms").checked });
       document.getElementById("af-id").textContent = "(ID #" + r.id + ")";
       if (r.existing) document.getElementById("af-msg").textContent = r.status === "approved"
-        ? "এই নম্বর আগেই approved — নিচে phone ও bKash দিয়ে আপনার code দেখুন।"
-        : "এই নম্বর আগেই registered, approval বাকি আছে। নিচে status দেখতে পারেন।";
+        ? "এই নম্বর আগেই approved — নিচের Partner Dashboard-এ আপনার code দেখুন।"
+        : "এই নম্বরে আগেই apply করা আছে, review চলছে। নিচে status দেখতে পারেন।";
       af.hidden = true; document.getElementById("af-done").hidden = false;
       document.getElementById("s-phone").value = v("phone"); document.getElementById("s-bkash").value = v("bkash");
-    } catch (x) { err.textContent = "Phone ও bKash নম্বর ঠিকভাবে দিন (11 digit)।"; }
+    } catch (x) { err.textContent = /terms/.test(x.message) ? "Terms মেনে নিতে টিক দিন।" : "Phone ও bKash নম্বর ঠিকভাবে দিন (11 digit)।"; }
   });
-  const copyBtn = (label, text) => { const b = document.createElement("button"); b.type = "button"; b.className = "btn line"; b.textContent = label;
-    b.onclick = () => navigator.clipboard.writeText(text).then(() => { b.textContent = "✓ Copied"; }); return b; };
+
+  const btn = (label, cls, fn) => { const b = document.createElement("button"); b.type = "button"; b.className = "btn " + cls; b.textContent = label; b.onclick = () => fn(b); return b; };
+  const copyBtn = (label, text) => btn(label, "line", b => navigator.clipboard.writeText(text).then(() => { b.textContent = "✓ Copied"; }));
+  const linkBtn = (label, href) => { const a = document.createElement("a"); a.className = "btn line"; a.textContent = label; a.href = href; a.target = "_blank"; a.rel = "noopener"; return a; };
   document.getElementById("ps").addEventListener("submit", async e => {
     e.preventDefault();
     const out = document.getElementById("ps-out"); out.textContent = "…";
     let r = null;
-    try { r = await rpc("partner_status", { p_phone: document.getElementById("s-phone").value, p_bkash: document.getElementById("s-bkash").value }); } catch (x) {}
+    try { r = await rpc("partner_dashboard", { p_phone: document.getElementById("s-phone").value, p_bkash: document.getElementById("s-bkash").value }); } catch (x) {}
     out.textContent = "";
-    if (r) r.name = String(r.name).replace(/[&<>"']/g, c => "&#" + c.charCodeAt(0) + ";");
-    if (!r) { out.innerHTML = '<p class="small" style="color:var(--red)">এই phone ও bKash দিয়ে কোনো registration পাওয়া যায়নি।</p>'; return; }
-    if (r.status !== "approved") { out.innerHTML = `<p class="small">${r.name}, আপনার registration (ID #${r.id}) ${r.status === "rejected" ? "approve করা হয়নি। প্রশ্ন থাকলে WhatsApp করুন।" : "approval-এর অপেক্ষায় আছে — সাধারণত ২৪ ঘণ্টার মধ্যে।"}</p>`; return; }
-    const link = location.origin + location.pathname + "?ref=" + r.code + "#order";
+    if (!r) { out.innerHTML = '<p class="small" style="color:var(--red)">এই WhatsApp ও bKash নম্বর দিয়ে কোনো application পাওয়া যায়নি।</p>'; return; }
+    const name = esc(r.name);
+    if (r.status !== "approved") {
+      out.innerHTML = `<p class="small">${name}, আপনার application (ID #${r.id}) ${r.status === "rejected"
+        ? "এবার approve করা হয়নি। প্রশ্ন থাকলে WhatsApp করুন।" : "review-এ আছে — সাধারণত ২৪ ঘণ্টার মধ্যে। Partner group-এ থাকুন।"}</p>`;
+      return;
+    }
+    const link = location.origin + location.pathname + "?ref=" + r.code;
+    const earned = r.sales * C.commPct / 100, owed = Math.max(earned - r.paid_out, 0);
     const card = document.createElement("div"); card.className = "code-card";
-    card.innerHTML = `<span class="small">${r.name}, আপনার partner code</span><b class="code">${r.code}</b><div class="lnk">${link}</div>`;
-    card.append(copyBtn("Copy code", r.code), copyBtn("Copy share link", link));
+    card.innerHTML = `<span class="small">${name}, আপনার partner code · since ${esc(r.since)}</span><b class="code">${esc(r.code)}</b><div class="lnk">${esc(link)}</div>
+      <div class="stats">
+        <div><b>${r.leads}</b>quote requests<br>(${r.leads_30d} in 30 days)</div>
+        <div><b>${r.open_orders}</b>orders in progress</div>
+        <div><b>${r.paid_orders}</b>paid orders</div>
+        <div><b>${tk(earned)}</b>total earned</div>
+        <div><b>${tk(r.paid_out)}</b>paid to you</div>
+        <div class="owe"><b>${tk(owed)}</b>${owed >= C.payoutMin ? "next " + C.payoutDay + " পাবেন" : "minimum " + tk(C.payoutMin) + " হলে payment"}</div>
+      </div>`;
+    card.append(copyBtn("Copy code", r.code), copyBtn("Copy link", link));
+    const kit = document.createElement("div"); kit.className = "kit"; kit.innerHTML = "<h4>Partner Kit — ready posts</h4>";
+    C.kit.forEach(t => {
+      const text = t.replaceAll("{CODE}", r.code).replaceAll("{LINK}", link), post = document.createElement("div");
+      post.className = "post"; post.innerHTML = `<p>${esc(text)}</p>`;
+      post.append(copyBtn("Copy", text), linkBtn("WhatsApp", "https://wa.me/?text=" + encodeURIComponent(text)),
+        linkBtn("Facebook", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(link)));
+      kit.append(post);
+    });
+    kit.append(linkBtn("Download promo image", "assets/post-before-after.png"));
+    card.append(kit);
     out.append(card);
   });
 </script>

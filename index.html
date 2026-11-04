@@ -40,7 +40,7 @@
   .btn.line:hover { background:#F0F8F4; }
   nav .btn, nav .btn:hover { margin-left:24px; color:#fff; }
 
-  .hero { background:var(--paper); border-bottom:1px solid var(--line); padding:64px 0 72px; }
+  .hero { background:var(--paper); border-bottom:1px solid var(--line); padding:64px 0 72px; overflow:hidden; }
   .hero .wrap { display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
   .hero-copy { max-width:580px; }
   .hero h1 { font-family:'Poppins',sans-serif; font-weight:700; letter-spacing:-.025em; font-size:clamp(34px, 4.2vw, 50px); line-height:1.12; margin:0 0 14px; }
@@ -111,6 +111,14 @@
   .deal span { color:#5A4A2A; font-size:14.5px; line-height:1.5; }
   .menu-note { margin-top:18px; color:var(--muted); font-size:15px; }
 
+  .earn { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+  .earn-big { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:22px 0; }
+  .earn-big div { background:var(--navy); color:#C9D3E3; border-radius:6px; padding:18px 18px 16px; font-size:15px; line-height:1.5; }
+  .earn-big div:last-child { background:var(--green); color:#E2F5EC; }
+  .earn-big b { display:block; font-family:'Poppins',sans-serif; font-size:38px; color:#fff; line-height:1.1; }
+  .earn-big strong { display:block; color:#fff; font-size:16px; margin-bottom:4px; }
+  .earn ol { padding-left:20px; color:#3C4550; } .earn ol li { padding:3px 0; }
+  .earn .ex { margin-top:16px; background:#FFF8E8; border:1px dashed #E2B65A; border-radius:6px; padding:12px 16px; font-size:15.5px; color:#5A4A2A; }
   .steps { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
   .step { padding:24px; border-right:1px solid var(--line); background:#fff; }
   .step:last-child { border-right:0; }
@@ -155,7 +163,7 @@
   .float { position:fixed; right:16px; bottom:16px; background:#0E7A3C; color:#fff; border-radius:8px; padding:12px 18px; font-weight:600; text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,.2); z-index:20; }
 
   @media (max-width:900px) {
-    .hero .wrap, .ba, .order { grid-template-columns:1fr; }
+    .hero .wrap, .ba, .order, .earn { grid-template-columns:1fr; }
     .sheet { justify-self:center; margin-bottom:30px; }
     .slide { left:-10px; width:200px; }
     .flyer { right:-6px; width:110px; }
@@ -185,7 +193,7 @@
 <div class="offer-bar">November Offer: Thesis-এর সাথে Cover FREE · Report + Presentation combo 15% OFF · Office / NGO: 5 pages free sample — 30 Nov পর্যন্ত</div>
 <header><div class="wrap">
   <a class="logo" href="#"><img src="assets/logo-icon.svg" alt=""><span class="wm">Format<b>BD</b></span></a>
-  <nav><a href="#services">Services &amp; Prices</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a class="btn" href="#order">Get a Quote</a></nav>
+  <nav><a href="#services">Services &amp; Prices</a><a href="#earn">Refer &amp; Earn</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a class="btn" href="#order">Get a Quote</a></nav>
 </div></header>
 
 <div class="hero"><div class="wrap">
@@ -262,6 +270,34 @@
 <!--/PRICING-->
 </div></section>
 
+<section id="earn"><div class="wrap earn">
+  <div>
+    <h2 style="font-size:34px">Refer &amp; Earn</h2>
+    <p style="color:var(--muted);margin-top:6px">বন্ধু, ক্লাসমেট বা অফিসের কাউকে FormatBD-তে পাঠান — প্রতিটি order থেকে আয় করুন। Student, freelancer, office staff — যে কেউ join করতে পারেন, কোনো খরচ নেই।</p>
+    <div class="earn-big">
+      <div><b class="r-comm">20%</b><strong>আপনার commission</strong>আপনার code দিয়ে আসা প্রতিটি order-এর, bKash-এ</div>
+      <div><b class="r-cust">10%</b><strong>Customer-এর ছাড়</strong>আপনার code ব্যবহার করলে customer পাবেন সরাসরি ছাড়</div>
+    </div>
+    <ol>
+      <li>পাশের form পূরণ করে register করুন।</li>
+      <li>WhatsApp-এ আপনার নিজের code ও link পাবেন (যেমন <b>RAFI01</b>)।</li>
+      <li>Batch group, Facebook বা অফিসে share করুন।</li>
+      <li>Customer full payment করলে <span class="r-days">৩</span> দিনের মধ্যে commission আপনার bKash-এ।</li>
+    </ol>
+    <p class="ex r-ex">উদাহরণ: ৳12,000-এর office report → customer পান ৳1,200 ছাড়, আপনি পান ৳2,160।</p>
+  </div>
+  <form id="af">
+    <div class="full"><h3 style="font-size:24px">Register as a Referral Partner</h3><p class="small">Submit করলে WhatsApp খুলবে — পাঠিয়ে দিন, ২৪ ঘণ্টার মধ্যে code পাবেন।</p></div>
+    <div><label for="a-name">Your name</label><input id="a-name" name="name" required></div>
+    <div><label for="a-phone">WhatsApp number</label><input id="a-phone" name="phone" inputmode="tel" required></div>
+    <div><label for="a-bkash">bKash number (commission)</label><input id="a-bkash" name="bkash" inputmode="tel" required></div>
+    <div><label for="a-org">University / Office</label><input id="a-org" name="org"></div>
+    <div class="full"><label for="a-where">কোথায় share করবেন?</label><select id="a-where" name="where"><option>Batch / class group</option><option>Facebook group or page</option><option>Office / colleagues</option><option>Other</option></select></div>
+    <div class="full"><button class="btn" type="submit">Register on WhatsApp</button></div>
+    <p class="full small">নিয়ম: নিজের order-এ নিজের code চলবে না · Commission শুধু full payment হলে · Code ছাড়া আসা order-এ commission নেই।</p>
+  </form>
+</div></section>
+
 <section id="process"><div class="wrap">
   <div class="sh"><h2>কাজ যেভাবে হয়</h2><p>প্রথম মেসেজ থেকে ফাইল হাতে পাওয়া পর্যন্ত — সবকিছু লিখিতভাবে।</p></div>
   <div class="steps">
@@ -318,7 +354,8 @@
     <div class="full"><label for="f-pkg">Item (from the price list)</label><input id="f-pkg" name="pkg" placeholder="e.g. Thesis / Internship Report, Flyer / Leaflet"></div>
     <div><label for="f-pages">Pages / slides / size</label><input id="f-pages" name="pages" placeholder="e.g. 80 pages, 6×3 ft"></div>
     <div><label for="f-due">Needed by</label><input id="f-due" name="due" type="date"></div>
-    <div class="full"><label for="f-org">Organisation / Department</label><input id="f-org" name="org"></div>
+    <div><label for="f-org">Organisation / Department</label><input id="f-org" name="org"></div>
+    <div><label for="f-ref">Referral code (if any)</label><input id="f-ref" name="ref" placeholder="e.g. RAFI01"></div>
     <div class="full"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="msg" rows="3" placeholder="Cover needed? Reference style, language…"></textarea></div>
     <div class="full"><button class="btn" type="submit">Send on WhatsApp</button> <span class="small">or email us: <a class="js-mail" href="#">formatbdteam@gmail.com</a></span></div>
   </form>
@@ -351,7 +388,16 @@
   document.getElementById("qf").addEventListener("submit", e => {
     e.preventDefault();
     const f = new FormData(e.target);
-    const t = `Quotation request — FormatBD\nName: ${f.get("name")}\nType: ${f.get("seg")}\nService: ${f.get("svc")}\nItem: ${f.get("pkg") || "-"}\nPages / slides / size: ${f.get("pages") || "-"}\nNeeded by: ${f.get("due") || "-"}\nOrganisation: ${f.get("org") || "-"}\nDetails: ${f.get("msg") || "-"}`;
+    const t = `Quotation request — FormatBD\nName: ${f.get("name")}\nType: ${f.get("seg")}\nService: ${f.get("svc")}\nItem: ${f.get("pkg") || "-"}\nPages / slides / size: ${f.get("pages") || "-"}\nNeeded by: ${f.get("due") || "-"}\nOrganisation: ${f.get("org") || "-"}\nReferral code: ${(f.get("ref") || "-").toUpperCase()}\nDetails: ${f.get("msg") || "-"}`;
+    window.open(waLink(t), "_blank");
+  });
+  // ?ref=CODE in a partner's link → prefill the code (kept for this visit)
+  const ref = new URLSearchParams(location.search).get("ref");
+  if (ref) document.getElementById("f-ref").value = ref.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12);
+  document.getElementById("af").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const t = `Referral partner registration — FormatBD\nName: ${f.get("name")}\nWhatsApp: ${f.get("phone")}\nbKash: ${f.get("bkash")}\nUniversity / Office: ${f.get("org") || "-"}\nWill share in: ${f.get("where")}`;
     window.open(waLink(t), "_blank");
   });
 </script>

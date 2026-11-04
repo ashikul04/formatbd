@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FormatBD — Report &amp; Presentation Formatting in Bangladesh</title>
-<meta name="description" content="Report and presentation formatting for government offices, NGOs and students in Bangladesh. Also thesis formatting, cover design and Bijoy to Unicode conversion. Delivery in 24–72 hours.">
-<meta property="og:title" content="FormatBD — Report &amp; Presentation Formatting">
-<meta property="og:description" content="Govt reports, NGO reports, thesis &amp; presentation formatting · Bijoy → Unicode · Cover design">
+<title>FormatBD — Report Formatting, Presentation &amp; Banner/Flyer Design</title>
+<meta name="description" content="Report formatting, presentation design and banner, flyer, poster design in Bangladesh. Fixed prices: report from ৳1,200, presentation from ৳1,500, design from ৳500. For govt offices, NGOs, students and businesses.">
+<meta property="og:title" content="FormatBD — Report, Presentation &amp; Design">
+<meta property="og:description" content="Report formatting from ৳1,200 · Presentation from ৳1,500 · Banner &amp; flyer design from ৳500">
 <meta property="og:image" content="assets/fb-cover.png">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +47,12 @@
   .hero .tag { font-family:'Tiro Bangla',serif; font-size:27px; line-height:1.4; color:var(--green); margin-bottom:16px; }
   .hero .lead { font-size:18px; line-height:1.8; color:#3C4550; }
   .hero .cta { display:flex; gap:12px; flex-wrap:wrap; margin:30px 0 32px; }
+  .chips { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:26px 0 0; }
+  .chip { display:block; text-decoration:none; background:#fff; border:1px solid var(--line); border-left:4px solid var(--green); border-radius:6px; padding:10px 14px; line-height:1.35; }
+  .chip:nth-child(2) { border-left-color:var(--navy); } .chip:nth-child(3) { border-left-color:var(--amber); }
+  .chip span { display:block; font-weight:600; color:var(--navy); font-size:15.5px; }
+  .chip small { color:var(--muted); font-size:14px; } .chip small b { color:var(--green); font-size:17px; }
+  .chip:hover { border-color:var(--green2); }
   .facts { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px 20px; font-size:14.5px; line-height:1.4; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; }
   .facts b { display:block; color:var(--navy); font-size:17px; margin-bottom:2px; }
 
@@ -68,6 +74,10 @@
   .slide .bars { display:flex; align-items:flex-end; gap:9px; height:48%; border-bottom:1px solid rgba(255,255,255,.25); }
   .slide .bars i { flex:1; background:#2BC48A; border-radius:2px 2px 0 0; }
   .slide .bars i:nth-child(odd) { background:#C4D0E2; }
+  .flyer { position:absolute; right:-34px; top:-28px; width:128px; aspect-ratio:3/4; background:var(--amber); border-radius:4px; padding:12px 11px; box-shadow:0 14px 30px rgba(19,41,75,.22); transform:rotate(4deg); display:flex; flex-direction:column; color:var(--navy); }
+  .flyer .fk { font-size:9.5px; font-weight:700; letter-spacing:.08em; }
+  .flyer .ft { font-family:'Poppins',sans-serif; font-weight:700; font-size:15px; line-height:1.1; margin:6px 0 auto; }
+  .flyer .fd { background:var(--navy); color:#fff; font-size:9.5px; font-weight:600; padding:3px 6px; border-radius:2px; align-self:flex-start; }
 
   section { padding:72px 0; }
   .sh { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:30px; }
@@ -75,42 +85,31 @@
   .sh p { color:var(--muted); max-width:520px; }
   .alt { background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 
-  .main-svc { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:22px; }
-  .svc { background:var(--navy); color:#C9D3E3; border-radius:6px; padding:30px 30px 28px; }
-  .svc h3 { color:#fff; font-family:'Poppins',sans-serif; font-weight:600; font-size:24px; letter-spacing:-.01em; margin-bottom:8px; }
-  .svc p { font-size:16px; line-height:1.7; max-width:46ch; }
-  .svc .inc { margin-top:14px; font-size:14px; color:#9FE0C2; font-weight:600; }
-  .sectors { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-  .sector { border:1px solid var(--line); border-top:4px solid var(--navy); border-radius:0; padding:24px; background:#fff; }
-  .sector.ngo { border-top-color:var(--green); } .sector.stu { border-top-color:var(--amber); }
-  .sector .k { font-size:14px; font-weight:500; color:var(--muted); }
-  .sector h3 { font-size:21px; margin:2px 0 12px; }
-  ul.dash { list-style:none; }
-  ul.dash li { padding:4px 0 4px 18px; position:relative; }
-  ul.dash li::before { content:""; position:absolute; left:0; top:15px; width:8px; height:2px; background:var(--green); }
-
-  .tabs { display:inline-flex; background:#fff; border:1px solid var(--line); border-radius:8px; padding:4px; gap:4px; margin-bottom:24px; flex-wrap:wrap; }
-  .tab { border:0; background:transparent; font:600 16px 'Hind Siliguri',sans-serif; color:var(--muted); padding:9px 18px; border-radius:6px; cursor:pointer; }
-  .tab.on { background:var(--navy); color:#fff; }
-  .plans { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-  .plans[hidden], .plans-note[hidden] { display:none; }
-  .plan { background:#fff; border:1px solid var(--line); border-radius:6px; padding:26px 24px; display:flex; flex-direction:column; position:relative; }
-  .plan.pop { border:2px solid var(--green); box-shadow:0 12px 30px rgba(11,122,84,.12); }
-  .flag { position:absolute; top:-13px; left:24px; background:var(--green); color:#fff; font-size:13px; font-weight:600; padding:2px 12px; border-radius:4px; }
-  .plan h3 { font-size:20px; }
-  .unit { color:var(--muted); font-size:15px; }
-  .price { margin:14px 0 2px; }
-  .price s { color:#6B7585; font-size:18px; }
-  .price b { font-size:34px; color:var(--navy); font-weight:700; margin-left:4px; }
-  .save { display:inline-block; background:#FDECEA; color:var(--red); font-size:14px; font-weight:600; padding:1px 10px; border-radius:4px; margin-bottom:14px; align-self:flex-start; }
-  .plan ul { list-style:none; margin-bottom:22px; flex:1; }
-  .plan li { padding:5px 0 5px 22px; position:relative; font-size:16px; border-bottom:1px solid #F1EEE7; }
-  .plan li::before { content:""; position:absolute; left:2px; top:13px; width:9px; height:5px; border-left:2px solid var(--green); border-bottom:2px solid var(--green); transform:rotate(-45deg); }
-  .plans-note { margin-top:16px; color:var(--muted); font-size:15px; }
-  .perks { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:30px; }
-  .perks div { border:1px dashed #C9C2B1; border-radius:6px; padding:16px 18px; background:#fff; }
-  .perks b { display:block; color:var(--navy); font-size:18px; }
-  .perks span { color:var(--muted); font-size:15px; }
+  .who { display:flex; flex-wrap:wrap; gap:8px 26px; color:var(--muted); font-size:15px; margin:-8px 0 28px; }
+  .who b { color:var(--navy); font-weight:600; }
+  .menu { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; align-items:start; }
+  .col { background:#fff; border:1px solid var(--line); border-top:4px solid var(--green); border-radius:6px; padding:24px 22px 22px; display:flex; flex-direction:column; }
+  .col:nth-child(2) { border-top-color:var(--navy); } .col:nth-child(3) { border-top-color:var(--amber); }
+  .col-h { padding-bottom:14px; border-bottom:2px solid var(--navy); margin-bottom:4px; }
+  .num { font-family:'Poppins',sans-serif; font-weight:700; font-size:13px; color:var(--muted); letter-spacing:.06em; }
+  .col h3 { font-family:'Poppins',sans-serif; font-weight:700; font-size:22px; letter-spacing:-.015em; margin:2px 0 2px; }
+  .from { color:var(--muted); font-size:15px; } .from b { color:var(--green); font-size:24px; font-weight:700; margin-left:2px; }
+  .col-h p { color:#3C4550; font-size:15.5px; line-height:1.6; margin-top:6px; }
+  .rows { list-style:none; margin-bottom:18px; }
+  .row { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; text-decoration:none; padding:11px 0; border-bottom:1px dashed #DAD5C8; }
+  .row:hover .nm { color:var(--green); }
+  .nm { font-weight:600; color:var(--navy); font-size:16px; line-height:1.35; }
+  .nm small { display:block; font-weight:400; color:var(--muted); font-size:13.5px; margin-top:2px; }
+  .pr { text-align:right; white-space:nowrap; line-height:1.25; }
+  .pr s { display:block; color:#8A93A1; font-size:13.5px; }
+  .pr b { color:var(--navy); font-size:18px; }
+  .col .btn { margin-top:auto; }
+  .deals { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:28px; }
+  .deal { display:flex; gap:14px; align-items:center; background:#FFF8E8; border:1px dashed #E2B65A; border-radius:6px; padding:16px 18px; }
+  .deal > b { font-family:'Poppins',sans-serif; font-weight:700; color:#fff; background:var(--red); border-radius:4px; padding:6px 10px; font-size:17px; white-space:nowrap; }
+  .deal strong { display:block; color:var(--navy); font-size:17px; }
+  .deal span { color:#5A4A2A; font-size:14.5px; line-height:1.5; }
+  .menu-note { margin-top:18px; color:var(--muted); font-size:15px; }
 
   .steps { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
   .step { padding:24px; border-right:1px solid var(--line); background:#fff; }
@@ -159,7 +158,8 @@
     .hero .wrap, .ba, .order { grid-template-columns:1fr; }
     .sheet { justify-self:center; margin-bottom:30px; }
     .slide { left:-10px; width:200px; }
-    .sectors, .plans, .perks, .main-svc { grid-template-columns:1fr; }
+    .flyer { right:-6px; width:110px; }
+    .menu, .deals { grid-template-columns:1fr; }
     .steps { grid-template-columns:1fr 1fr; } .step:nth-child(2) { border-right:0; } .step:nth-child(-n+2) { border-bottom:1px solid var(--line); }
     nav a:not(.btn) { display:none; }
     .facts { grid-template-columns:repeat(2, auto); }
@@ -172,7 +172,7 @@
     .steps, form, .promises { grid-template-columns:1fr; } .step { border-right:0; border-bottom:1px solid var(--line); }
     .util .hours { display:none; }
     nav .btn { padding:8px 14px; }
-    .tabs { display:flex; } .tab { flex:1; padding:9px 8px; font-size:15px; }
+    .chips { grid-template-columns:1fr; }
     .sheet { padding:24px 20px; }
   }
 </style>
@@ -182,18 +182,23 @@
   <span>Phone / WhatsApp: <a class="js-tel" href="#">01782-761981</a></span>
   <span class="hours">Every day 9am – 11pm · <a class="js-mail" href="#">formatbdteam@gmail.com</a></span>
 </div></div>
-<div class="offer-bar">নভেম্বর অফার: শিক্ষার্থীদের কভার পেজ ফ্রি · অফিস ও এনজিও-র জন্য ৫ পৃষ্ঠার ফ্রি নমুনা — ৩০ নভেম্বর পর্যন্ত</div>
+<div class="offer-bar">November Offer: Thesis-এর সাথে Cover FREE · Report + Presentation combo 15% OFF · Office / NGO: 5 pages free sample — 30 Nov পর্যন্ত</div>
 <header><div class="wrap">
   <a class="logo" href="#"><img src="assets/logo-icon.svg" alt=""><span class="wm">Format<b>BD</b></span></a>
-  <nav><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a class="btn" href="#order">Get a Quote</a></nav>
+  <nav><a href="#services">Services &amp; Prices</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a class="btn" href="#order">Get a Quote</a></nav>
 </div></header>
 
 <div class="hero"><div class="wrap">
   <div class="hero-copy">
-    <h1>Report &amp; Presentation Formatting</h1>
+    <h1>Report, Presentation &amp; Design</h1>
     <p class="tag">লেখা আপনার, সাজানো আমাদের।</p>
-    <p class="lead">সরকারি দপ্তর, এনজিও আর শিক্ষার্থীদের প্রতিবেদন ও প্রেজেন্টেশন — বাংলা বা ইংরেজিতে, আপনার নির্দেশিকা মেনে জমা দেওয়ার উপযোগী করে সাজিয়ে দিই। থিসিস, কভার ডিজাইন আর বিজয় থেকে ইউনিকোড রূপান্তরও করি।</p>
-    <div class="cta"><a class="btn" href="#order">Get a Free Quote</a><a class="btn line" href="#pricing">View Pricing</a></div>
+    <p class="lead">আমরা ৩টা কাজ করি — <b>report formatting</b>, <b>presentation</b> আর <b>banner / flyer design</b>। দাম fixed, আগেই লেখা আছে। File পাঠান, 24–72 ঘণ্টায় Word + PDF হাতে পান।</p>
+    <div class="chips">
+      <a class="chip" href="#svc-report"><span>Report Formatting</span><small>from <b>৳1,200</b></small></a>
+      <a class="chip" href="#svc-slides"><span>Presentation</span><small>from <b>৳1,500</b></small></a>
+      <a class="chip" href="#svc-design"><span>Banner &amp; Flyer</span><small>from <b>৳500</b></small></a>
+    </div>
+    <div class="cta"><a class="btn" href="#order">Get a Free Quote</a><a class="btn line" href="#services">See All Prices</a></div>
     <div class="facts">
       <div><b>24–72 hrs</b>delivery</div>
       <div><b>2 rounds</b>of free revisions</div>
@@ -219,132 +224,48 @@
       <li><span>পরিশিষ্ট</span><span></span><span>২৬</span></li>
     </ul>
     <div class="stamp"><img src="assets/logo-icon.svg" alt="">Formatted by FormatBD</div>
+    <div class="flyer" aria-hidden="true"><div class="fk">FLYER</div><div class="ft">Training Workshop 2026</div><div class="fd">12 Dec · Dhaka</div></div>
     <div class="slide" aria-hidden="true"><div class="st">লক্ষ্যমাত্রা বনাম অর্জন</div><div class="ss">Slide 4 · Meeting presentation</div><div class="bars"><i style="height:45%"></i><i style="height:62%"></i><i style="height:70%"></i><i style="height:88%"></i><i style="height:80%"></i><i style="height:100%"></i></div></div>
   </div>
 </div></div>
 
-<section id="services"><div class="wrap">
-  <div class="sh"><h2>আমাদের মূল কাজ</h2><p>আমরা লিখি না, গবেষণাও করি না। আপনার লেখা রিপোর্ট আর প্রেজেন্টেশন আপনার নির্দেশিকা অনুযায়ী নিখুঁতভাবে সাজিয়ে দিই।</p></div>
-  <div class="main-svc">
-    <div class="svc"><h3>Report Formatting</h3><p>Project, annual, donor and government reports. Styles, numbered headings, auto table of contents, tables, figures, annexes and a cover.</p><div class="inc">Word + print-ready PDF</div></div>
-    <div class="svc"><h3>Presentation Design</h3><p>Meeting, donor and defence decks. Clean slide layouts, charts redrawn from your data, consistent fonts in Bangla or English.</p><div class="inc">PowerPoint + PDF</div></div>
-  </div>
-  <div class="sectors">
-    <div class="sector"><div class="k">সরকারি দপ্তর ও প্রকল্প</div><h3>সরকারি নথি ও প্রতিবেদন</h3><ul class="dash">
-      <li>প্রকল্প সমাপ্তি ও অগ্রগতি প্রতিবেদন</li><li>বিজয় (SutonnyMJ) থেকে ইউনিকোড রূপান্তর</li><li>প্রশিক্ষণ ম্যানুয়াল ও নির্দেশিকা</li><li>সভার প্রেজেন্টেশন</li><li>আনুষ্ঠানিক কোটেশন ও বিল</li></ul></div>
-    <div class="sector ngo"><div class="k">NGOs and development organisations</div><h3>Donor Reports &amp; Publications</h3><ul class="dash">
-      <li>Annual, baseline &amp; evaluation reports</li><li>Policy briefs, newsletters, case studies</li><li>Donor visibility guidelines followed</li><li>Charts, infographics, print-ready files</li><li>Bangla &amp; English</li></ul></div>
-    <div class="sector stu"><div class="k">Students</div><h3>Thesis &amp; Internship Reports</h3><ul class="dash">
-      <li>Your department’s guideline, followed exactly</li><li>Auto table of contents, list of tables and figures</li><li>APA / IEEE / Harvard references</li><li>Cover page and defence presentation</li><li>Word or LaTeX</li></ul></div>
-  </div>
-</div></section>
-
-<section id="pricing" class="alt"><div class="wrap">
-  <div class="sh"><h2>মূল্য ও অফার</h2><p>নির্দিষ্ট দামের প্যাকেজ, কোনো লুকানো খরচ নেই। ফাইল দেখে চূড়ান্ত দাম জানাই — প্যাকেজের দামের বেশি কখনো নয়।</p></div>
+<section id="services" class="alt"><div class="wrap">
+  <div class="sh"><h2>Services &amp; Prices</h2><p>যে কাজ লাগবে, সেটার পাশে দাম লেখা আছে। লাইনে click করুন — order form নিজে থেকেই পূরণ হয়ে যাবে।</p></div>
+  <div class="who"><span><b>Govt office</b> ও project</span><span><b>NGO / INGO</b></span><span><b>Student</b></span><span><b>Business</b> ও event</span></div>
 <!--PRICING-->
-<div class="tabs" role="tablist">
-<button role="tab" class="tab on" data-seg="govt" aria-selected="true">Government</button>
-<button role="tab" class="tab" data-seg="ngo" aria-selected="false">NGO / INGO</button>
-<button role="tab" class="tab" data-seg="student" aria-selected="false">Students</button>
+<div class="menu">
+<div class="col" id="svc-report"><div class="col-h"><span class="num">01</span><h3>Report Formatting</h3><div class="from">from <b>৳1,200</b></div><p>রিপোর্ট, থিসিস ও অফিসিয়াল ডকুমেন্ট — আপনার guideline মেনে সাজানো, Word + PDF।</p></div><ul class="rows">
+<li><a class="row js-pkg" href="#order" data-svc="0" data-who="0" data-pkg="Govt / Office Report (৳12,000)"><span class="nm">Govt / Office Report<small>40 pages পর্যন্ত + cover · extra page ৳250</small></span><span class="pr"><s>৳15,000</s><b>৳12,000</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="0" data-who="1" data-pkg="NGO / Donor Report (৳16,000)"><span class="nm">NGO / Donor Report<small>40 pages পর্যন্ত + cover · extra page ৳350</small></span><span class="pr"><s>৳19,000</s><b>৳16,000</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="0" data-who="1" data-pkg="Annual Report (৳35,000)"><span class="nm">Annual Report<small>60 pages + cover + 6 infographics</small></span><span class="pr"><s>৳41,000</s><b>৳35,000</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="0" data-who="2" data-pkg="Thesis / Internship Report (৳1,200)"><span class="nm">Thesis / Internship Report<small>75 pages পর্যন্ত · TOC, page number, Word + PDF</small></span><span class="pr"><s>৳1,500</s><b>৳1,200</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="0" data-who="2" data-pkg="Thesis + Cover + References (৳1,900)"><span class="nm">Thesis + Cover + References<small>75 pages পর্যন্ত · APA / IEEE / Harvard</small></span><span class="pr"><s>৳2,300</s><b>৳1,900</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="0" data-who="0" data-pkg="Bijoy → Unicode (৳10/page)"><span class="nm">Bijoy → Unicode<small>প্রতি page · প্রথম 20 pages FREE</small></span><span class="pr"><s>৳15</s><b>৳10/page</b></span></a></li>
+</ul><a class="btn line js-pkg" href="#order" data-svc="0" data-pkg="Report Formatting">Order Report Formatting</a></div>
+<div class="col" id="svc-slides"><div class="col-h"><span class="num">02</span><h3>Presentation</h3><div class="from">from <b>৳1,500</b></div><p>মিটিং, ডোনার বা ডিফেন্সের জন্য clean slides — আপনার data থেকে chart সহ।</p></div><ul class="rows">
+<li><a class="row js-pkg" href="#order" data-svc="1" data-who="0" data-pkg="Office / Meeting Presentation (৳5,000)"><span class="nm">Office / Meeting Presentation<small>15 slides পর্যন্ত · extra slide ৳400</small></span><span class="pr"><s>৳6,000</s><b>৳5,000</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="1" data-who="1" data-pkg="NGO / Donor Presentation (৳7,000)"><span class="nm">NGO / Donor Presentation<small>15 slides পর্যন্ত · charts + infographics</small></span><span class="pr"><s>৳9,000</s><b>৳7,000</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="1" data-who="2" data-pkg="Class / Defence Presentation (৳1,500)"><span class="nm">Class / Defence Presentation<small>15 slides পর্যন্ত · extra slide ৳150</small></span><span class="pr"><s>৳2,000</s><b>৳1,500</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="1" data-who="2" data-pkg="Thesis + Defence Combo (৳3,200)"><span class="nm">Thesis + Defence Combo<small>formatting + cover + 15 slides</small></span><span class="pr"><s>৳4,550</s><b>৳3,200</b></span></a></li>
+</ul><a class="btn line js-pkg" href="#order" data-svc="1" data-pkg="Presentation">Order Presentation</a></div>
+<div class="col" id="svc-design"><div class="col-h"><span class="num">03</span><h3>Banner, Flyer &amp; Design</h3><div class="from">from <b>৳500</b></div><p>Banner, flyer, poster, cover, certificate — ছাপার উপযোগী print-ready file।</p></div><ul class="rows">
+<li><a class="row js-pkg" href="#order" data-svc="2" data-pkg="Facebook / Social Post (৳500)"><span class="nm">Facebook / Social Post<small>1 design · 2 revisions</small></span><span class="pr"><s>৳700</s><b>৳500</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="2" data-pkg="Flyer / Leaflet (৳1,200)"><span class="nm">Flyer / Leaflet<small>A4 বা A5 · one side</small></span><span class="pr"><s>৳1,500</s><b>৳1,200</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="2" data-pkg="Banner / X-Stand / Roll-up (৳1,500)"><span class="nm">Banner / X-Stand / Roll-up<small>যেকোনো size · print-ready PDF</small></span><span class="pr"><s>৳2,000</s><b>৳1,500</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="2" data-pkg="Poster / Stage Backdrop (৳2,000)"><span class="nm">Poster / Stage Backdrop<small>event, seminar, workshop</small></span><span class="pr"><s>৳2,500</s><b>৳2,000</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="2" data-pkg="Cover Page Design (৳800)"><span class="nm">Cover Page Design<small>thesis / report cover · office cover ৳3,000</small></span><span class="pr"><s>৳1,000</s><b>৳800</b></span></a></li>
+<li><a class="row js-pkg" href="#order" data-svc="2" data-pkg="Certificate / Invitation Card (৳800)"><span class="nm">Certificate / Invitation Card<small>নাম বসিয়ে দেওয়া সহ</small></span><span class="pr"><s>৳1,000</s><b>৳800</b></span></a></li>
+</ul><a class="btn line js-pkg" href="#order" data-svc="2" data-pkg="Banner, Flyer &amp; Design">Order Banner, Flyer &amp; Design</a></div>
 </div>
-<div class="plans" data-seg="govt">
-<article class="plan pop">
-<div class="flag">Most Popular</div>
-<h3>প্রতিবেদন / ম্যানুয়াল</h3><div class="unit">৪০ পৃষ্ঠা পর্যন্ত</div>
-<div class="price"><s>৳15,000</s> <b>৳12,000</b></div>
-<div class="save">Save ৳3,000 (20% off)</div><ul>
-<li>প্রকল্প সমাপ্তি ও অগ্রগতি প্রতিবেদন, প্রশিক্ষণ ম্যানুয়াল</li>
-<li>সূচিপত্র, সারণি, চিত্র, পরিশিষ্ট</li>
-<li>আনুষ্ঠানিক কভার পেজ</li>
-<li>ছাপার উপযোগী PDF ও Word ফাইল</li>
-</ul><a class="btn js-pkg" href="#order" data-pkg="প্রতিবেদন / ম্যানুয়াল (৳12,000)">Choose Package</a></article>
-<article class="plan">
-<h3>সভার প্রেজেন্টেশন</h3><div class="unit">১৫ স্লাইড পর্যন্ত</div>
-<div class="price"><s>৳6,000</s> <b>৳5,000</b></div>
-<div class="save">Save ৳1,000 (17% off)</div><ul>
-<li>মন্ত্রণালয় বা বিভাগীয় সভার জন্য</li>
-<li>তথ্য থেকে চার্ট ও টেবিল</li>
-<li>বাংলা ইউনিকোডে</li>
-<li>PowerPoint ও PDF</li>
-</ul><a class="btn line js-pkg" href="#order" data-pkg="সভার প্রেজেন্টেশন (৳5,000)">Choose Package</a></article>
-<article class="plan">
-<h3>বিজয় থেকে ইউনিকোড</h3><div class="unit">প্রতি পৃষ্ঠা</div>
-<div class="price"><s>৳15</s> <b>৳10</b></div>
-<div class="save">Save ৳5 (33% off)</div><ul>
-<li>SutonnyMJ / বিজয়ের লেখা নির্ভুল ইউনিকোডে</li>
-<li>নিকস বা সোলায়মানলিপি ফন্টে</li>
-<li>বানান ও যুক্তবর্ণ যাচাই</li>
-<li>প্রথম ২০ পৃষ্ঠা ফ্রি</li>
-</ul><a class="btn line js-pkg" href="#order" data-pkg="বিজয় থেকে ইউনিকোড (৳10)">Choose Package</a></article>
-</div><p class="plans-note" data-seg="govt">Extra page ৳250 · Cover ৳3,000 · Per slide ৳400 · Urgent delivery +30%</p>
-<div class="plans" data-seg="ngo" hidden>
-<article class="plan">
-<h3>Policy Brief / Newsletter</h3><div class="unit">up to 8 pages</div>
-<div class="price"><s>৳8,000</s> <b>৳6,000</b></div>
-<div class="save">Save ৳2,000 (25% off)</div><ul>
-<li>Designed to your brand</li>
-<li>2 charts or infographics</li>
-<li>Bangla or English</li>
-<li>Print and online versions</li>
-</ul><a class="btn line js-pkg" href="#order" data-pkg="Policy Brief / Newsletter (৳6,000)">Choose Package</a></article>
-<article class="plan pop">
-<div class="flag">Most Popular</div>
-<h3>Project Report</h3><div class="unit">up to 40 pages</div>
-<div class="price"><s>৳19,000</s> <b>৳16,000</b></div>
-<div class="save">Save ৳3,000 (16% off)</div><ul>
-<li>Baseline, endline and evaluation reports</li>
-<li>Donor visibility guidelines followed</li>
-<li>References, annexes, footnotes</li>
-<li>Cover design included</li>
-</ul><a class="btn js-pkg" href="#order" data-pkg="Project Report (৳16,000)">Choose Package</a></article>
-<article class="plan">
-<h3>Annual Report</h3><div class="unit">up to 60 pages</div>
-<div class="price"><s>৳41,000</s> <b>৳35,000</b></div>
-<div class="save">Save ৳6,000 (15% off)</div><ul>
-<li>Full layout and cover</li>
-<li>6 infographics</li>
-<li>Print-ready files for the press</li>
-<li>Editable InDesign / Word files</li>
-</ul><a class="btn line js-pkg" href="#order" data-pkg="Annual Report (৳35,000)">Choose Package</a></article>
-</div><p class="plans-note" data-seg="ngo" hidden>Extra page ৳350 · Cover ৳5,000 · Per slide ৳600 · Urgent delivery +30%</p>
-<div class="plans" data-seg="student" hidden>
-<article class="plan">
-<h3>Basic Formatting</h3><div class="unit">up to 75 pages</div>
-<div class="price"><s>৳1,500</s> <b>৳1,200</b></div>
-<div class="save">Save ৳300 (20% off)</div><ul>
-<li>Margins, fonts and spacing per your department</li>
-<li>Auto table of contents</li>
-<li>Page numbers (i, ii and 1, 2)</li>
-<li>Word + PDF</li>
-</ul><a class="btn line js-pkg" href="#order" data-pkg="Basic Formatting (৳1,200)">Choose Package</a></article>
-<article class="plan pop">
-<div class="flag">Most Popular</div>
-<h3>Complete Package</h3><div class="unit">up to 75 pages</div>
-<div class="price"><s>৳2,300</s> <b>৳1,900</b></div>
-<div class="save">Save ৳400 (17% off)</div><ul>
-<li>Everything in Basic</li>
-<li>Professional cover page</li>
-<li>APA / IEEE / Harvard references</li>
-<li>List of tables and figures</li>
-</ul><a class="btn js-pkg" href="#order" data-pkg="Complete Package (৳1,900)">Choose Package</a></article>
-<article class="plan">
-<h3>Defence Combo</h3><div class="unit">report + 15 slides</div>
-<div class="price"><s>৳4,550</s> <b>৳3,200</b></div>
-<div class="save">Save ৳1,350 (30% off)</div><ul>
-<li>Everything in Complete</li>
-<li>Defence presentation (15 slides)</li>
-<li>Charts and diagrams redrawn</li>
-<li>Speaker notes included</li>
-</ul><a class="btn line js-pkg" href="#order" data-pkg="Defence Combo (৳3,200)">Choose Package</a></article>
-</div><p class="plans-note" data-seg="student" hidden>Extra page ৳20 · Cover ৳800 · Per slide ৳150 · Urgent delivery +40%</p>
-<div class="perks"><div><b>Group order: 15% off</b><span>3 or more from the same batch, ordering together</span></div><div><b>Refer a friend: ৳200 off</b><span>You and your friend both save on the next order</span></div><div><b>Free 5-page sample</b><span>For government offices and NGOs: check our quality before you order</span></div></div>
+<div class="deals"><div class="deal"><b>FREE</b><div><strong>Cover Page</strong><span>Thesis বা report formatting নিলে cover design ফ্রি।</span></div></div><div class="deal"><b>15% OFF</b><div><strong>Combo / Group</strong><span>Report + Presentation একসাথে, অথবা ৩ জন বন্ধু মিলে অর্ডার করলে।</span></div></div><div class="deal"><b>5 Pages</b><div><strong>Free Sample</strong><span>অফিস ও NGO: ৫ পেজ ফ্রি সাজিয়ে দেখাই, পছন্দ হলে তবেই অর্ডার।</span></div></div></div>
+<p class="menu-note">সব দাম fixed — file দেখে final quote দিই, list price-এর বেশি না (extra page/slide ছাড়া)। 50% advance · Urgent delivery +30–40% · Printing খরচ দামে ধরা নেই।</p>
 <!--/PRICING-->
 </div></section>
 
 <section id="process"><div class="wrap">
   <div class="sh"><h2>কাজ যেভাবে হয়</h2><p>প্রথম মেসেজ থেকে ফাইল হাতে পাওয়া পর্যন্ত — সবকিছু লিখিতভাবে।</p></div>
   <div class="steps">
-    <div class="step"><div class="n">১</div><b>ফাইল পাঠান</b><span>Word বা PDF ফাইল আর আপনার নির্দেশিকা — WhatsApp, Messenger বা ইমেইলে।</span><i>সঙ্গে সঙ্গে প্রাপ্তি নিশ্চিত</i></div>
+    <div class="step"><div class="n">১</div><b>ফাইল পাঠান</b><span>Report-এর Word/PDF, অথবা design-এর লেখা, logo ও ছবি — WhatsApp, Messenger বা email-এ।</span><i>সঙ্গে সঙ্গে প্রাপ্তি নিশ্চিত</i></div>
     <div class="step"><div class="n">২</div><b>কোটেশন নিন</b><span>নির্দিষ্ট দাম আর ডেলিভারির তারিখ, লিখিতভাবে।</span><i>শিক্ষার্থী ১ ঘণ্টা · প্রতিষ্ঠান ২৪ ঘণ্টা</i></div>
     <div class="step"><div class="n">৩</div><b>অগ্রিম দিন</b><span>৫০% bKash-এ। প্রতিষ্ঠানের ক্ষেত্রে কার্যাদেশ বা চুক্তি অনুযায়ী।</span><i>কাজ শুরু সেদিনই</i></div>
     <div class="step"><div class="n">৪</div><b>বুঝে নিন</b><span>প্রিভিউ দেখুন, দুবার পর্যন্ত সংশোধন, তারপর চূড়ান্ত ফাইল।</span><i>Word + PDF</i></div>
@@ -371,6 +292,8 @@
     <details><summary>আপনারা কি থিসিস বা রিপোর্ট লিখে দেন?</summary><p>না। আমরা শুধু ফরম্যাটিং, ডিজাইন আর রূপান্তরের কাজ করি। লেখা ও গবেষণা আপনার নিজের — তাই ভার্সিটি বা অফিসে কোনো সমস্যা হয় না।</p></details>
     <details><summary>সরকারি দপ্তর থেকে কাজ দিতে কী লাগবে?</summary><p>নথির কপি ও প্রয়োজনীয় ফরম্যাট জানালেই আমরা লিখিত কোটেশন পাঠাই। কার্যাদেশ পাওয়ার পর কাজ শুরু হয় এবং কাজ শেষে বিল দেওয়া হয়।</p></details>
     <details><summary>বিজয়ে লেখা পুরনো ফাইল কি ইউনিকোড করা যাবে?</summary><p>হ্যাঁ। SutonnyMJ / বিজয়ের লেখা ইউনিকোডে রূপান্তর করে নিকস বা সোলায়মানলিপি ফন্টে সাজিয়ে দিই, যুক্তবর্ণ ও বানান মিলিয়ে দেখি। প্রথম ২০ পৃষ্ঠা ফ্রি।</p></details>
+    <details><summary>Banner বা flyer ছাপিয়েও দেন?</summary><p>আমরা design করি এবং ছাপার উপযোগী print-ready file (PDF, CMYK, সঠিক size) দিই — যেকোনো press থেকে ছাপাতে পারবেন। ছাপার খরচ আমাদের দামে ধরা নেই।</p></details>
+    <details><summary>Design-এর জন্য কী পাঠাতে হবে?</summary><p>লেখা (title, তারিখ, ঠিকানা), logo আর ছবি থাকলে পাঠান, সাথে size বলুন (যেমন banner 6×3 ft)। ২৪ ঘণ্টার মধ্যে প্রথম design পাবেন, দুবার পর্যন্ত বিনা খরচে পরিবর্তন।</p></details>
     <details><summary>Do you work with NGOs and INGOs in English?</summary><p>Yes. We format donor reports, annual reports and policy briefs in English and Bangla, following your brand and donor visibility guidelines. Email us for a formal quotation within 24 hours.</p></details>
     <details><summary>আমার ভার্সিটির নিয়ম আপনারা জানবেন কীভাবে?</summary><p>ডিপার্টমেন্টের গাইডলাইন বা আগের কোনো অনুমোদিত থিসিসের কপি পাঠান — আমরা হুবহু সেই নিয়মে সাজাই।</p></details>
     <details><summary>টাকা কীভাবে দেব?</summary><p>শিক্ষার্থীরা শুরুতে ৫০% bKash-এ, বাকিটা ডেলিভারির সময়। প্রতিষ্ঠান কোটেশন ও কার্যাদেশ অনুযায়ী ব্যাংক বা চেকে।</p></details>
@@ -390,9 +313,10 @@
   <form id="qf">
     <div class="full"><h2 style="font-size:28px">বিনামূল্যে কোটেশন</h2><p class="small">Fill in the form and WhatsApp opens with your details already typed. Send your file in the same chat.</p></div>
     <div><label for="f-name">Your name</label><input id="f-name" name="name" required></div>
-    <div><label for="f-seg">You are</label><select id="f-seg" name="seg"><option>Government office / Project</option><option>NGO / INGO</option><option>Student</option><option>Other</option></select></div>
-    <div class="full"><label for="f-pkg">Package or type of work</label><input id="f-pkg" name="pkg" placeholder="e.g. Project report, meeting presentation, thesis"></div>
-    <div><label for="f-pages">Pages / slides (approx.)</label><input id="f-pages" name="pages" inputmode="numeric" placeholder="e.g. 80"></div>
+    <div><label for="f-seg">You are</label><select id="f-seg" name="seg"><option>Government office / Project</option><option>NGO / INGO</option><option>Student</option><option>Business / Event</option><option>Other</option></select></div>
+    <div class="full"><label for="f-svc">Service</label><select id="f-svc" name="svc"><option>Report Formatting</option><option>Presentation</option><option>Banner, Flyer &amp; Design</option></select></div>
+    <div class="full"><label for="f-pkg">Item (from the price list)</label><input id="f-pkg" name="pkg" placeholder="e.g. Thesis / Internship Report, Flyer / Leaflet"></div>
+    <div><label for="f-pages">Pages / slides / size</label><input id="f-pages" name="pages" placeholder="e.g. 80 pages, 6×3 ft"></div>
     <div><label for="f-due">Needed by</label><input id="f-due" name="due" type="date"></div>
     <div class="full"><label for="f-org">Organisation / Department</label><input id="f-org" name="org"></div>
     <div class="full"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="msg" rows="3" placeholder="Cover needed? Reference style, language…"></textarea></div>
@@ -401,8 +325,8 @@
 </div></section>
 
 <footer><div class="wrap">
-  <div><span class="wm" style="color:#fff;font-size:22px">Format<b>BD</b></span><p style="margin-top:8px">সরকারি দপ্তর, এনজিও ও শিক্ষার্থীদের জন্য নথি ফরম্যাটিং, কভার ডিজাইন ও ইউনিকোড রূপান্তর। ঢাকা, বাংলাদেশ।</p></div>
-  <div><h4>Services</h4>Report formatting<br>Presentation design<br>Thesis, covers, Bijoy to Unicode</div>
+  <div><span class="wm" style="color:#fff;font-size:22px">Format<b>BD</b></span><p style="margin-top:8px">Govt office, NGO, student ও business-এর জন্য report formatting, presentation আর banner–flyer design। ঢাকা, বাংলাদেশ।</p></div>
+  <div><h4>Services</h4>Report formatting<br>Presentation design<br>Banner, flyer, poster &amp; cover design</div>
   <div><h4>Contact</h4><a class="js-tel" href="#">01782-761981</a><br><a class="js-mail" href="#">formatbdteam@gmail.com</a><br><a class="js-fb" href="#">Facebook</a></div>
   <div class="en">We format and design — we never write your content. · © 2026 FormatBD</div>
 </div></footer>
@@ -417,20 +341,17 @@
   set(".js-tel", "tel:+" + C.wa);
   set(".js-mail", "mailto:" + C.email + "?subject=" + encodeURIComponent("Quotation request"));
   set(".js-fb", "https://www.facebook.com/" + C.fb);
-  document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
-    document.querySelectorAll(".tab").forEach(x => { x.classList.toggle("on", x === t); x.setAttribute("aria-selected", x === t); });
-    document.querySelectorAll(".plans, .plans-note").forEach(p => p.hidden = p.dataset.seg !== t.dataset.seg);
-  }));
-  const segOf = { govt: 0, ngo: 1, student: 2 };
+  // price-list click → prefill the order form
   document.addEventListener("click", e => {
     const b = e.target.closest(".js-pkg"); if (!b) return;
-    document.getElementById("f-pkg").value = b.dataset.pkg;
-    document.getElementById("f-seg").selectedIndex = segOf[b.closest(".plans").dataset.seg];
+    document.getElementById("f-svc").selectedIndex = +b.dataset.svc;
+    document.getElementById("f-pkg").value = b.classList.contains("row") ? b.dataset.pkg : "";
+    if (b.dataset.who) document.getElementById("f-seg").selectedIndex = +b.dataset.who;
   });
   document.getElementById("qf").addEventListener("submit", e => {
     e.preventDefault();
     const f = new FormData(e.target);
-    const t = `Quotation request — FormatBD\nName: ${f.get("name")}\nType: ${f.get("seg")}\nPackage / work: ${f.get("pkg") || "-"}\nPages / slides: ${f.get("pages") || "-"}\nNeeded by: ${f.get("due") || "-"}\nOrganisation: ${f.get("org") || "-"}\nDetails: ${f.get("msg") || "-"}`;
+    const t = `Quotation request — FormatBD\nName: ${f.get("name")}\nType: ${f.get("seg")}\nService: ${f.get("svc")}\nItem: ${f.get("pkg") || "-"}\nPages / slides / size: ${f.get("pages") || "-"}\nNeeded by: ${f.get("due") || "-"}\nOrganisation: ${f.get("org") || "-"}\nDetails: ${f.get("msg") || "-"}`;
     window.open(waLink(t), "_blank");
   });
 </script>

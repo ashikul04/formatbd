@@ -119,6 +119,15 @@
   .earn-big strong { display:block; color:#fff; font-size:16px; margin-bottom:4px; }
   .earn ol { padding-left:20px; color:#3C4550; } .earn ol li { padding:3px 0; }
   .earn .ex { margin-top:16px; background:#FFF8E8; border:1px dashed #E2B65A; border-radius:6px; padding:12px 16px; font-size:15.5px; color:#5A4A2A; }
+  .partner { display:grid; gap:16px; }
+  .pbox { background:#EAF6F0; border:1px solid #B7E0CC; border-radius:6px; padding:22px 24px; }
+  .pbox h3 { color:var(--green); font-size:21px; margin-bottom:6px; }
+  .pbox p { color:#3C4550; margin-bottom:14px; }
+  .pcheck { background:var(--paper); }
+  .code-card { background:#fff; border:2px solid var(--green); border-radius:6px; padding:14px 16px; }
+  .code-card b.code { display:block; font-family:'Poppins',sans-serif; font-size:30px; color:var(--navy); letter-spacing:.04em; }
+  .code-card .lnk { font-size:14px; color:var(--muted); word-break:break-all; margin:6px 0 10px; }
+  .code-card button { margin:0 8px 6px 0; padding:7px 14px; font-size:14px; }
   .steps { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
   .step { padding:24px; border-right:1px solid var(--line); background:#fff; }
   .step:last-child { border-right:0; }
@@ -279,23 +288,37 @@
       <div><b class="r-cust">10%</b><strong>Customer-এর ছাড়</strong>আপনার code ব্যবহার করলে customer পাবেন সরাসরি ছাড়</div>
     </div>
     <ol>
-      <li>পাশের form পূরণ করে register করুন।</li>
-      <li>WhatsApp-এ আপনার নিজের code ও link পাবেন (যেমন <b>RAFI01</b>)।</li>
-      <li>Batch group, Facebook বা অফিসে share করুন।</li>
+      <li>পাশের form পূরণ করে register করুন, তারপর <b>Partner WhatsApp group</b>-এ join করুন।</li>
+      <li>Approve হলে আপনার নিজের code তৈরি হয়ে যাবে (যেমন <b>RAFI07</b>) — "Check my code"-এ phone ও bKash দিয়ে দেখুন, group-এও জানানো হবে।</li>
+      <li>Code বা link batch group, Facebook বা অফিসে share করুন।</li>
       <li>Customer full payment করলে <span class="r-days">৩</span> দিনের মধ্যে commission আপনার bKash-এ।</li>
     </ol>
     <p class="ex r-ex">উদাহরণ: ৳12,000-এর office report → customer পান ৳1,200 ছাড়, আপনি পান ৳2,160।</p>
   </div>
+  <div class="partner">
   <form id="af">
-    <div class="full"><h3 style="font-size:24px">Register as a Referral Partner</h3><p class="small">Submit করলে WhatsApp খুলবে — পাঠিয়ে দিন, ২৪ ঘণ্টার মধ্যে code পাবেন।</p></div>
+    <div class="full"><h3 style="font-size:24px">Register as a Referral Partner</h3><p class="small">Register করে Partner WhatsApp group-এ join করুন। ২৪ ঘণ্টার মধ্যে approve হলে code পাবেন।</p></div>
     <div><label for="a-name">Your name</label><input id="a-name" name="name" required></div>
     <div><label for="a-phone">WhatsApp number</label><input id="a-phone" name="phone" inputmode="tel" required></div>
     <div><label for="a-bkash">bKash number (commission)</label><input id="a-bkash" name="bkash" inputmode="tel" required></div>
     <div><label for="a-org">University / Office</label><input id="a-org" name="org"></div>
     <div class="full"><label for="a-where">কোথায় share করবেন?</label><select id="a-where" name="where"><option>Batch / class group</option><option>Facebook group or page</option><option>Office / colleagues</option><option>Other</option></select></div>
-    <div class="full"><button class="btn" type="submit">Register on WhatsApp</button></div>
+    <div class="full"><button class="btn" type="submit">Register</button> <span id="af-err" class="small" style="color:var(--red)"></span></div>
     <p class="full small">নিয়ম: নিজের order-এ নিজের code চলবে না · Commission শুধু full payment হলে · Code ছাড়া আসা order-এ commission নেই।</p>
   </form>
+  <div id="af-done" class="pbox" hidden>
+    <h3>✓ Registration পেয়েছি <span id="af-id"></span></h3>
+    <p id="af-msg">Approve হলে (সাধারণত ২৪ ঘণ্টার মধ্যে) আপনার code তৈরি হবে। নিচে "Check my code"-এ দেখতে পাবেন।</p>
+    <a id="af-group" class="btn js-group" href="#" target="_blank" rel="noopener">Join Partner WhatsApp Group</a>
+  </div>
+  <form id="ps" class="pcheck">
+    <div class="full"><h3 style="font-size:20px">Already registered? Check my code</h3></div>
+    <div><label for="s-phone">WhatsApp number</label><input id="s-phone" inputmode="tel" required></div>
+    <div><label for="s-bkash">bKash number</label><input id="s-bkash" inputmode="tel" required></div>
+    <div class="full"><button class="btn line" type="submit">Check my code</button></div>
+    <div id="ps-out" class="full" aria-live="polite"></div>
+  </form>
+  </div>
 </div></section>
 
 <section id="process"><div class="wrap">
@@ -371,7 +394,7 @@
 
 <script>
   // Contact details — written by ops/build.py from config.json
-  const C = { wa: "8801782761981", email: "formatbdteam@gmail.com", fb: "profile.php?id=61596278724692", sbUrl: "https://mepwncbscyceeyoxgvda.supabase.co", sbKey: "sb_publishable_hM7CJC9fcQ2uOZyHIxdnSQ_53WIUaNk", refPct: 10 };
+  const C = { wa: "8801782761981", email: "formatbdteam@gmail.com", fb: "profile.php?id=61596278724692", sbUrl: "https://mepwncbscyceeyoxgvda.supabase.co", sbKey: "sb_publishable_hM7CJC9fcQ2uOZyHIxdnSQ_53WIUaNk", refPct: 10, group: "" };
   // Supabase (public key, insert-only tables): saves form submissions; skipped until build.py fills sbUrl/sbKey
   const sbCall = (path, body) => !(C.sbUrl && C.sbKey) ? Promise.resolve(null) :
     fetch(C.sbUrl + "/rest/v1/" + path, { method: "POST", keepalive: true, body: JSON.stringify(body),
@@ -413,13 +436,47 @@
   refIn.addEventListener("change", checkRef);
   const ref = new URLSearchParams(location.search).get("ref");
   if (ref) { refIn.value = ref.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12); checkRef(); }
-  document.getElementById("af").addEventListener("submit", e => {
+  // referral partners: register_partner / partner_status are the only partner calls the public key may make
+  const rpc = (fn, body) => fetch(C.sbUrl + "/rest/v1/rpc/" + fn, { method: "POST", body: JSON.stringify(body),
+    headers: Object.assign({ apikey: C.sbKey, "Content-Type": "application/json" },
+      C.sbKey.startsWith("eyJ") ? { Authorization: "Bearer " + C.sbKey } : {}) })
+    .then(async r => { const j = await r.json(); if (!r.ok) throw new Error(j.message || r.status); return j; });
+  document.querySelectorAll(".js-group").forEach(a => C.group ? a.href = C.group : a.hidden = true);
+  const af = document.getElementById("af");
+  af.addEventListener("submit", async e => {
     e.preventDefault();
-    const f = new FormData(e.target);
-    const t = `Referral partner registration — FormatBD\nName: ${f.get("name")}\nWhatsApp: ${f.get("phone")}\nbKash: ${f.get("bkash")}\nUniversity / Office: ${f.get("org") || "-"}\nWill share in: ${f.get("where")}`;
-    const v = k => (f.get(k) || "").trim();
-    sbCall("partner_signups", { name: v("name"), phone: v("phone"), bkash: v("bkash"), org: v("org"), where_share: v("where") });
-    window.open(waLink(t), "_blank");
+    const f = new FormData(af), v = k => (f.get(k) || "").trim(), err = document.getElementById("af-err");
+    if (!C.sbUrl) {  // no database: fall back to a WhatsApp message
+      window.open(waLink(`Referral partner registration — FormatBD\nName: ${v("name")}\nWhatsApp: ${v("phone")}\nbKash: ${v("bkash")}\nUniversity / Office: ${v("org") || "-"}\nWill share in: ${v("where")}`), "_blank");
+      return;
+    }
+    err.textContent = "";
+    try {
+      const r = await rpc("register_partner", { p_name: v("name"), p_phone: v("phone"), p_bkash: v("bkash"), p_org: v("org"), p_where: v("where") });
+      document.getElementById("af-id").textContent = "(ID #" + r.id + ")";
+      if (r.existing) document.getElementById("af-msg").textContent = r.status === "approved"
+        ? "এই নম্বর আগেই approved — নিচে phone ও bKash দিয়ে আপনার code দেখুন।"
+        : "এই নম্বর আগেই registered, approval বাকি আছে। নিচে status দেখতে পারেন।";
+      af.hidden = true; document.getElementById("af-done").hidden = false;
+      document.getElementById("s-phone").value = v("phone"); document.getElementById("s-bkash").value = v("bkash");
+    } catch (x) { err.textContent = "Phone ও bKash নম্বর ঠিকভাবে দিন (11 digit)।"; }
+  });
+  const copyBtn = (label, text) => { const b = document.createElement("button"); b.type = "button"; b.className = "btn line"; b.textContent = label;
+    b.onclick = () => navigator.clipboard.writeText(text).then(() => { b.textContent = "✓ Copied"; }); return b; };
+  document.getElementById("ps").addEventListener("submit", async e => {
+    e.preventDefault();
+    const out = document.getElementById("ps-out"); out.textContent = "…";
+    let r = null;
+    try { r = await rpc("partner_status", { p_phone: document.getElementById("s-phone").value, p_bkash: document.getElementById("s-bkash").value }); } catch (x) {}
+    out.textContent = "";
+    if (r) r.name = String(r.name).replace(/[&<>"']/g, c => "&#" + c.charCodeAt(0) + ";");
+    if (!r) { out.innerHTML = '<p class="small" style="color:var(--red)">এই phone ও bKash দিয়ে কোনো registration পাওয়া যায়নি।</p>'; return; }
+    if (r.status !== "approved") { out.innerHTML = `<p class="small">${r.name}, আপনার registration (ID #${r.id}) ${r.status === "rejected" ? "approve করা হয়নি। প্রশ্ন থাকলে WhatsApp করুন।" : "approval-এর অপেক্ষায় আছে — সাধারণত ২৪ ঘণ্টার মধ্যে।"}</p>`; return; }
+    const link = location.origin + location.pathname + "?ref=" + r.code + "#order";
+    const card = document.createElement("div"); card.className = "code-card";
+    card.innerHTML = `<span class="small">${r.name}, আপনার partner code</span><b class="code">${r.code}</b><div class="lnk">${link}</div>`;
+    card.append(copyBtn("Copy code", r.code), copyBtn("Copy share link", link));
+    out.append(card);
   });
 </script>
 </body>

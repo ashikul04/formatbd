@@ -355,7 +355,7 @@
     <div><label for="f-pages">Pages / slides / size</label><input id="f-pages" name="pages" placeholder="e.g. 80 pages, 6×3 ft"></div>
     <div><label for="f-due">Needed by</label><input id="f-due" name="due" type="date"></div>
     <div><label for="f-org">Organisation / Department</label><input id="f-org" name="org"></div>
-    <div><label for="f-ref">Referral code (if any)</label><input id="f-ref" name="ref" placeholder="e.g. RAFI01"></div>
+    <div><label for="f-ref">Referral code (if any)</label><input id="f-ref" name="ref" placeholder="e.g. RAFI01"><span id="ref-ok" class="small" aria-live="polite"></span></div>
     <div class="full"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="msg" rows="3" placeholder="Cover needed? Reference style, language…"></textarea></div>
     <div class="full"><button class="btn" type="submit">Send on WhatsApp</button> <span class="small">or email us: <a class="js-mail" href="#">formatbdteam@gmail.com</a></span></div>
   </form>
@@ -371,8 +371,13 @@
 
 <script>
   // Contact details — written by ops/build.py from config.json
-  const C = { wa: "8801782761981", email: "formatbdteam@gmail.com", fb: "profile.php?id=61596278724692" };
-  const waLink = t => "https://wa.me/" + C.wa + "?text=" + encodeURIComponent(t);
+  const C = { wa: "8801782761981", email: "formatbdteam@gmail.com", fb: "profile.php?id=61596278724692", sbUrl: "", sbKey: "", refPct: 10 };
+  // Supabase (public key, insert-only tables): saves form submissions; skipped until build.py fills sbUrl/sbKey
+  const sbCall = (path, body) => !(C.sbUrl && C.sbKey) ? Promise.resolve(null) :
+    fetch(C.sbUrl + "/rest/v1/" + path, { method: "POST", keepalive: true, body: JSON.stringify(body),
+      headers: Object.assign({ apikey: C.sbKey, "Content-Type": "application/json", Prefer: "return=minimal" },
+        C.sbKey.startsWith("eyJ") ? { Authorization: "Bearer " + C.sbKey } : {}) }).catch(() => null);
+  const waLink = t =>"https://wa.me/" + C.wa + "?text=" + encodeURIComponent(t);
   const set = (sel, href) => document.querySelectorAll(sel).forEach(a => a.href = href);
   set(".js-wa", waLink("আসসালামু আলাইকুম, FormatBD — একটি কোটেশন চাই।"));
   set(".js-tel", "tel:+" + C.wa);
@@ -389,15 +394,31 @@
     e.preventDefault();
     const f = new FormData(e.target);
     const t = `Quotation request — FormatBD\nName: ${f.get("name")}\nType: ${f.get("seg")}\nService: ${f.get("svc")}\nItem: ${f.get("pkg") || "-"}\nPages / slides / size: ${f.get("pages") || "-"}\nNeeded by: ${f.get("due") || "-"}\nOrganisation: ${f.get("org") || "-"}\nReferral code: ${(f.get("ref") || "-").toUpperCase()}\nDetails: ${f.get("msg") || "-"}`;
+    const v = k => (f.get(k) || "").trim();
+    sbCall("quote_requests", { name: v("name"), seg: v("seg"), svc: v("svc"), pkg: v("pkg"), pages: v("pages"),
+      due: v("due"), org: v("org"), ref: v("ref").toUpperCase(), msg: v("msg") });
     window.open(waLink(t), "_blank");
   });
-  // ?ref=CODE in a partner's link → prefill the code (kept for this visit)
+  // referral code: ?ref=CODE in a partner's link prefills it; checked live once Supabase is on
+  const refIn = document.getElementById("f-ref"), refOk = document.getElementById("ref-ok");
+  const checkRef = async () => {
+    const code = refIn.value.trim().toUpperCase();
+    refOk.textContent = ""; if (!code || !C.sbUrl) return;
+    const r = await fetch(C.sbUrl + "/rest/v1/rpc/check_ref", { method: "POST", body: JSON.stringify({ code }),
+      headers: Object.assign({ apikey: C.sbKey, "Content-Type": "application/json" },
+        C.sbKey.startsWith("eyJ") ? { Authorization: "Bearer " + C.sbKey } : {}) }).then(x => x.json()).catch(() => null);
+    if (r === true) { refOk.textContent = `✓ Code ঠিক আছে — ${C.refPct}% OFF পাবেন`; refOk.style.color = "var(--green)"; }
+    else if (r === false) { refOk.textContent = "এই code পাওয়া যায়নি — বানান দেখুন"; refOk.style.color = "var(--red)"; }
+  };
+  refIn.addEventListener("change", checkRef);
   const ref = new URLSearchParams(location.search).get("ref");
-  if (ref) document.getElementById("f-ref").value = ref.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12);
+  if (ref) { refIn.value = ref.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12); checkRef(); }
   document.getElementById("af").addEventListener("submit", e => {
     e.preventDefault();
     const f = new FormData(e.target);
     const t = `Referral partner registration — FormatBD\nName: ${f.get("name")}\nWhatsApp: ${f.get("phone")}\nbKash: ${f.get("bkash")}\nUniversity / Office: ${f.get("org") || "-"}\nWill share in: ${f.get("where")}`;
+    const v = k => (f.get(k) || "").trim();
+    sbCall("partner_signups", { name: v("name"), phone: v("phone"), bkash: v("bkash"), org: v("org"), where_share: v("where") });
     window.open(waLink(t), "_blank");
   });
 </script>

@@ -371,7 +371,7 @@
 
 <script>
   // Contact details — written by ops/build.py from config.json
-  const C = { wa: "8801782761981", email: "formatbdteam@gmail.com", fb: "profile.php?id=61596278724692", sbUrl: "", sbKey: "", refPct: 10 };
+  const C = { wa: "8801782761981", email: "formatbdteam@gmail.com", fb: "profile.php?id=61596278724692", sbUrl: "https://mepwncbscyceeyoxgvda.supabase.co", sbKey: "sb_publishable_hM7CJC9fcQ2uOZyHIxdnSQ_53WIUaNk", refPct: 10 };
   // Supabase (public key, insert-only tables): saves form submissions; skipped until build.py fills sbUrl/sbKey
   const sbCall = (path, body) => !(C.sbUrl && C.sbKey) ? Promise.resolve(null) :
     fetch(C.sbUrl + "/rest/v1/" + path, { method: "POST", keepalive: true, body: JSON.stringify(body),

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FormatBD — Report Formatting, Presentation &amp; Banner/Flyer Design</title>
-<meta name="description" content="Report formatting, presentation design and banner, flyer, poster design in Bangladesh. Fixed prices: report from ৳1,200, presentation from ৳1,500, design from ৳500. For govt offices, NGOs, students and businesses.">
-<meta property="og:title" content="FormatBD — Report, Presentation &amp; Design">
-<meta property="og:description" content="Report formatting from ৳1,200 · Presentation from ৳1,500 · Banner &amp; flyer design from ৳500">
-<meta property="og:image" content="assets/fb-cover.png">
+<title>FormatBD — Report &amp; Presentation Formatting in Bangladesh</title>
+<meta name="description" content="Report, thesis and presentation formatting in Bangladesh. Fixed prices: report from ৳1,200, presentation from ৳1,500. Bangla &amp; English, Word + PDF, 2 free revisions. For govt offices, NGOs and students.">
+<meta property="og:title" content="FormatBD — Report &amp; Presentation Formatting">
+<meta property="og:description" content="Report formatting from ৳1,200 · Presentation from ৳1,500 · See before/after samples">
+<meta property="og:image" content="https://ashikul04.github.io/formatbd/assets/samples/gov-report-after.jpg">
 <meta name="theme-color" content="#13294B">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +49,7 @@
   .hero h1 { font-size:clamp(38px, 4.8vw, 58px); line-height:1.08; letter-spacing:-.03em; }
   .hero .tag { font-size:clamp(20px, 2vw, 24px); font-weight:600; color:var(--green); margin:14px 0 10px; }
   .hero .lead { font-size:18px; color:#3C4550; max-width:30em; }
-  .svc { list-style:none; display:grid; grid-template-columns:repeat(3,1fr); margin:28px 0; background:#fff; border:1px solid var(--line); border-radius:10px; }
+  .svc { list-style:none; display:grid; grid-template-columns:repeat(2,1fr); margin:28px 0; background:#fff; border:1px solid var(--line); border-radius:10px; }
   .svc li + li { border-left:1px solid var(--line); }
   .svc a { display:block; padding:12px 14px; text-decoration:none; line-height:1.35; font-weight:600; font-size:15.5px; color:var(--navy); white-space:nowrap; }
   .svc a:hover { background:#F4FAF7; }
@@ -78,10 +78,6 @@
   .slide .bars { display:flex; align-items:flex-end; gap:9px; height:48%; border-bottom:1px solid rgba(255,255,255,.25); }
   .slide .bars i { flex:1; background:#2BC48A; border-radius:2px 2px 0 0; }
   .slide .bars i:nth-child(odd) { background:#C4D0E2; }
-  .flyer { position:absolute; right:-30px; top:-26px; width:124px; aspect-ratio:3/4; background:var(--amber); border-radius:4px; padding:12px 11px; box-shadow:0 14px 30px rgba(19,41,75,.22); transform:rotate(4deg); display:flex; flex-direction:column; color:var(--navy); }
-  .flyer .fk { font-size:9.5px; font-weight:700; letter-spacing:.08em; }
-  .flyer .ft { font-family:'Poppins',sans-serif; font-weight:700; font-size:15px; line-height:1.1; margin:6px 0 auto; }
-  .flyer .fd { background:var(--navy); color:#fff; font-size:9.5px; font-weight:600; padding:3px 6px; border-radius:2px; align-self:flex-start; }
 
   section { padding:88px 0; }
   .sh { max-width:640px; margin-bottom:40px; }
@@ -89,7 +85,7 @@
   .alt { background:var(--paper); }
 
   /* prices */
-  .menu { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; align-items:start; }
+  .menu { display:grid; grid-template-columns:repeat(2,1fr); gap:56px; align-items:start; }
   .col-h { padding-bottom:12px; border-bottom:2px solid var(--navy); }
   .col h3 { font-size:22px; }
   .col-h p { color:var(--muted); font-size:15px; line-height:1.55; margin-top:6px; }
@@ -117,10 +113,28 @@
   .steps b { display:block; color:var(--navy); font-size:18px; margin-bottom:4px; }
   .steps span { color:var(--muted); font-size:15.5px; }
 
+  /* samples */
+  .tabs { display:inline-flex; background:#fff; border:1px solid var(--line); border-radius:10px; padding:4px; margin-bottom:28px; }
+  .tabs button { border:0; background:none; font:600 16px 'Hind Siliguri',sans-serif; color:var(--muted); padding:8px 20px; border-radius:7px; cursor:pointer; }
+  .tabs button[aria-selected="true"] { background:var(--navy); color:#fff; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  .grid.sl { grid-template-columns:1fr 1fr; } .grid.sl .card:first-child { grid-column:1/-1; }
+  .cmp { position:relative; overflow:hidden; border:1px solid #DAD5C8; border-radius:6px; box-shadow:0 12px 30px rgba(19,41,75,.10); background:#fff; --p:50%; user-select:none; }
+  .cmp img { display:block; width:100%; height:auto; }
+  .cmp .bf { position:absolute; inset:0; clip-path:inset(0 calc(100% - var(--p)) 0 0); }
+  .cmp .bar { position:absolute; top:0; bottom:0; left:var(--p); width:3px; margin-left:-1.5px; background:var(--green2); pointer-events:none; }
+  .cmp .bar::after { content:"\2039 \203A"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:38px; height:38px; border-radius:50%; background:var(--green2); color:#fff; font:700 15px/38px Poppins,sans-serif; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,.2); }
+  .cmp input { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; margin:0; }
+  .cmp .lb { position:absolute; top:10px; font:600 12.5px Poppins,sans-serif; color:#fff; padding:3px 9px; border-radius:4px; pointer-events:none; }
+  .cmp .lb.l { left:10px; background:rgba(150,40,40,.85); } .cmp .lb.r { right:10px; background:var(--green); }
+  .card figcaption { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:12px; font-size:15px; color:var(--muted); line-height:1.45; }
+  .card figcaption b { display:block; color:var(--navy); font-size:16.5px; }
+  .card figcaption button { flex:none; border:0; background:none; color:var(--green); font:600 15px 'Hind Siliguri',sans-serif; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+  .samp-note { margin-top:22px; font-size:14px; color:var(--muted); }
+  button.btn { cursor:pointer; }
+
   /* promise */
-  .ba { display:grid; grid-template-columns:.85fr 1.15fr; gap:64px; align-items:center; }
-  .ba img { width:100%; height:auto; max-width:440px; border-radius:8px; box-shadow:0 12px 32px rgba(19,41,75,.1); }
-  .promises { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:24px 32px; margin-top:28px; }
+  .promises { list-style:none; display:grid; grid-template-columns:repeat(4,1fr); gap:24px 32px; margin-top:28px; }
   .promises b { display:block; color:var(--navy); font-size:17px; }
   .promises span { color:var(--muted); font-size:15.5px; }
 
@@ -156,9 +170,10 @@
 
   @media (max-width:900px) {
     .hero { padding:48px 0 64px; }
-    .hero .wrap, .ba { grid-template-columns:1fr; gap:48px; }
+    .hero .wrap { grid-template-columns:1fr; gap:48px; }
+    .grid, .grid.sl, .promises { grid-template-columns:1fr 1fr; }
     .sheet { justify-self:center; max-width:340px; }
-    .slide { left:-14px; width:190px; } .flyer { right:-8px; width:104px; }
+    .slide { left:-14px; width:190px; }
     .menu, .deals { grid-template-columns:1fr; } .menu { gap:48px; }
     .steps { grid-template-columns:1fr 1fr; }
     nav a:not(.btn) { display:none; }
@@ -171,7 +186,7 @@
     .svc li + li { border-left:0; border-top:1px solid var(--line); }
     .svc a { display:flex; justify-content:space-between; align-items:baseline; }
     .cta .btn { flex:1 1 100%; }
-    .steps, .promises { grid-template-columns:1fr; gap:24px; }
+    .steps, .promises, .grid, .grid.sl { grid-template-columns:1fr; gap:24px; }
     .sheet { padding:24px 20px; }
     .offer-bar { font-size:13.5px; }
   }
@@ -182,21 +197,20 @@
 <div class="offer-bar">November Offer: Thesis-এর সাথে Cover FREE · Report + Presentation combo 15% OFF · Office / NGO: 5 pages free sample — 30 Nov পর্যন্ত</div>
 <header><div class="wrap">
   <a class="logo" href="./" aria-label="FormatBD home"><img src="assets/logo-icon.svg" alt=""><span class="wm">Format<b>BD</b></span></a>
-  <nav aria-label="Main"><a href="#services">Prices</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a class="btn" href="order.html">Order দিন</a></nav>
+  <nav aria-label="Main"><a href="#samples">Samples</a><a href="#services">Prices</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a class="btn" href="order.html">Order দিন</a></nav>
 </div></header>
 
 <main>
 <div class="hero"><div class="wrap">
   <div>
-    <h1>Report, Presentation &amp; Design</h1>
+    <h1>Report &amp; Presentation Formatting</h1>
     <p class="tag">লেখা আপনার, সাজানো আমাদের।</p>
     <p class="lead">File পাঠান, 24–72 ঘণ্টায় সুন্দর করে সাজানো Word + PDF হাতে পান। দাম fixed, আগেই লেখা।</p>
     <ul class="svc">
       <li><a href="#svc-report">Report Formatting<span>from <b>৳1,200</b></span></a></li>
       <li><a href="#svc-slides">Presentation<span>from <b>৳1,500</b></span></a></li>
-      <li><a href="#svc-design">Banner &amp; Flyer<span>from <b>৳500</b></span></a></li>
     </ul>
-    <div class="cta"><a class="btn" href="order.html">Order দিন · free estimate</a><a class="btn ghost" href="#services">সব দাম দেখুন</a></div>
+    <div class="cta"><button class="btn js-chat" type="button">১ মিনিটে দাম জানুন</button><a class="btn ghost" href="#samples">Samples দেখুন</a></div>
     <ul class="facts">
       <li><b>24–72 ঘণ্টা</b> delivery</li>
       <li><b>2 বার</b> free revision</li>
@@ -221,13 +235,34 @@
       <li><span>পরিশিষ্ট</span><span></span><span>২৬</span></li>
     </ul>
     <div class="stamp"><img src="assets/logo-icon.svg" alt="">Formatted by FormatBD</div>
-    <div class="flyer" aria-hidden="true"><div class="fk">FLYER</div><div class="ft">Training Workshop 2026</div><div class="fd">12 Dec · Dhaka</div></div>
     <div class="slide" aria-hidden="true"><div class="st">লক্ষ্যমাত্রা বনাম অর্জন</div><div class="ss">Slide 4 · Meeting presentation</div><div class="bars"><i style="height:45%"></i><i style="height:62%"></i><i style="height:70%"></i><i style="height:88%"></i><i style="height:80%"></i><i style="height:100%"></i></div></div>
   </div>
 </div></div>
 
+<section id="samples" class="alt"><div class="wrap">
+  <div class="sh"><h2>Samples: আগে ও পরে</h2><p>একই লেখা — শুধু formatting বদলেছে। মাঝের দাগটা টেনে দেখুন।</p></div>
+  <div class="tabs" role="tablist"><button type="button" role="tab" aria-selected="true" aria-controls="g-rep">Report Formatting</button><button type="button" role="tab" aria-selected="false" aria-controls="g-sl">Presentation</button></div>
+<div class="grid rep" id="g-rep" role="tabpanel">
+<figure class="card"><div class="cmp"><img src="assets/samples/gov-report-after.jpg" alt="Govt project report — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/gov-report-before.jpg" alt="Govt project report — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Govt project report: before / after slider"></div>
+<figcaption><span><b>Govt project report</b>বাংলা · সারণি, চিত্র, header-footer · <a href="assets/samples/gov-report-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="gov-report">এমন চাই →</button></figcaption></figure>
+<figure class="card"><div class="cmp"><img src="assets/samples/ngo-report-after.jpg" alt="NGO / donor report — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/ngo-report-before.jpg" alt="NGO / donor report — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="NGO / donor report: before / after slider"></div>
+<figcaption><span><b>NGO / donor report</b>English · charts, stat boxes, donor style · <a href="assets/samples/ngo-report-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="ngo-report">এমন চাই →</button></figcaption></figure>
+<figure class="card"><div class="cmp"><img src="assets/samples/thesis-after.jpg" alt="Thesis table of contents — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/thesis-before.jpg" alt="Thesis table of contents — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Thesis table of contents: before / after slider"></div>
+<figcaption><span><b>Thesis table of contents</b>Auto TOC · i, ii → 1, 2 page numbers · <a href="assets/samples/thesis-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="stu-basic">এমন চাই →</button></figcaption></figure>
+</div>
+<div class="grid sl" id="g-sl" role="tabpanel" hidden>
+<figure class="card"><div class="cmp"><img src="assets/samples/gov-meeting-after.jpg" alt="Office meeting slide — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/gov-meeting-before.jpg" alt="Office meeting slide — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Office meeting slide: before / after slider"></div>
+<figcaption><span><b>Office meeting slide</b>লেখার দেয়াল → KPI + chart · <a href="assets/samples/gov-meeting-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="gov-meeting">এমন চাই →</button></figcaption></figure>
+<figure class="card"><div class="cmp"><img src="assets/samples/ngo-deck-after.jpg" alt="Donor presentation slide — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/ngo-deck-before.jpg" alt="Donor presentation slide — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Donor presentation slide: before / after slider"></div>
+<figcaption><span><b>Donor presentation slide</b>Pasted table → clear infographic · <a href="assets/samples/ngo-deck-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="ngo-deck">এমন চাই →</button></figcaption></figure>
+<figure class="card"><div class="cmp"><img src="assets/samples/defence-after.jpg" alt="Thesis defence slide — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/defence-before.jpg" alt="Thesis defence slide — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Thesis defence slide: before / after slider"></div>
+<figcaption><span><b>Thesis defence slide</b>Paragraph → step-by-step diagram · <a href="assets/samples/defence-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="stu-slides">এমন চাই →</button></figcaption></figure>
+</div>
+  <p class="samp-note">সব নমুনার নাম ও তথ্য কাল্পনিক। Client-এর file আমরা কখনো কাউকে দেখাই না। অফিস ও NGO: আপনার নিজের file-এর ৫ পেজ ফ্রি সাজিয়ে দেখাই।</p>
+</div></section>
+
 <section id="services"><div class="wrap">
-  <div class="sh"><h2>Prices</h2><p>Govt office, NGO, student বা business: যে কাজ লাগবে, তার পাশে দাম লেখা। যেকোনো লাইনে click করলেই order শুরু।</p></div>
+  <div class="sh"><h2>Prices</h2><p>Govt office, NGO বা student: যে কাজ লাগবে, তার পাশে দাম লেখা। যেকোনো লাইনে click করলে ১ মিনিটে estimate।</p></div>
 <!--PRICING-->
 <div class="menu">
 <div class="col" id="svc-report"><div class="col-h"><h3>Report Formatting</h3><p>রিপোর্ট, থিসিস ও অফিসিয়াল ডকুমেন্ট — আপনার guideline মেনে সাজানো, Word + PDF।</p></div><ul class="rows">
@@ -244,21 +279,13 @@
 <li><a class="row" href="order.html?pkg=stu-slides"><span class="nm">Class / Defence Presentation<small>15 slides পর্যন্ত · extra slide ৳150</small></span><span class="pr"><s>৳2,000</s><b>৳1,500</b></span></a></li>
 <li><a class="row" href="order.html?pkg=stu-defense"><span class="nm">Thesis + Defence Combo<small>formatting + cover + 15 slides</small></span><span class="pr"><s>৳4,550</s><b>৳3,200</b></span></a></li>
 </ul></div>
-<div class="col" id="svc-design"><div class="col-h"><h3>Banner, Flyer &amp; Design</h3><p>Banner, flyer, poster, cover, certificate — ছাপার উপযোগী print-ready file।</p></div><ul class="rows">
-<li><a class="row" href="order.html?pkg=dsn-social"><span class="nm">Facebook / Social Post<small>1 design · 2 revisions</small></span><span class="pr"><s>৳700</s><b>৳500</b></span></a></li>
-<li><a class="row" href="order.html?pkg=dsn-flyer"><span class="nm">Flyer / Leaflet<small>A4 বা A5 · one side</small></span><span class="pr"><s>৳1,500</s><b>৳1,200</b></span></a></li>
-<li><a class="row" href="order.html?pkg=dsn-banner"><span class="nm">Banner / X-Stand / Roll-up<small>যেকোনো size · print-ready PDF</small></span><span class="pr"><s>৳2,000</s><b>৳1,500</b></span></a></li>
-<li><a class="row" href="order.html?pkg=dsn-poster"><span class="nm">Poster / Stage Backdrop<small>event, seminar, workshop</small></span><span class="pr"><s>৳2,500</s><b>৳2,000</b></span></a></li>
-<li><a class="row" href="order.html?pkg=dsn-cover"><span class="nm">Cover Page Design<small>thesis / report cover · office cover ৳3,000</small></span><span class="pr"><s>৳1,000</s><b>৳800</b></span></a></li>
-<li><a class="row" href="order.html?pkg=dsn-cert"><span class="nm">Certificate / Invitation Card<small>নাম বসিয়ে দেওয়া সহ</small></span><span class="pr"><s>৳1,000</s><b>৳800</b></span></a></li>
-</ul></div>
 </div>
 <ul class="deals"><li><b>FREE</b><span><strong>Cover Page</strong> — Thesis বা report formatting নিলে cover design ফ্রি।</span></li><li><b>15% OFF</b><span><strong>Combo / Group</strong> — Report + Presentation একসাথে, অথবা ৩ জন বন্ধু মিলে অর্ডার করলে।</span></li><li><b>5 Pages</b><span><strong>Free Sample</strong> — অফিস ও NGO: ৫ পেজ ফ্রি সাজিয়ে দেখাই, পছন্দ হলে তবেই অর্ডার।</span></li></ul>
 <p class="menu-note">দাম fixed — file দেখে final দাম confirm করি, list price-এর বেশি না (extra page/slide ছাড়া)। 20% advance · Urgent +30–40% · Printing খরচ আলাদা।</p>
 <!--/PRICING-->
 </div></section>
 
-<section id="process" class="alt"><div class="wrap">
+<section id="process"><div class="wrap">
   <div class="sh"><h2>How it works</h2><p>প্রথম click থেকে file হাতে পাওয়া পর্যন্ত, সবকিছু লিখিত।</p></div>
   <ol class="steps">
     <li><b>Order দিন</b><span data-wa="WhatsApp-এ কী কাজ লাগবে জানান, file পাঠান।">Service বাছুন, file upload করুন, সাথে সাথে estimate দেখুন। ৩–৪ মিনিট।</span></li>
@@ -268,8 +295,7 @@
   </ol>
 </div></section>
 
-<section><div class="wrap ba">
-  <img src="assets/post-before-after.png" alt="একই লেখা — formatting-এর আগে ও পরে" loading="lazy" width="1080" height="1080">
+<section class="alt"><div class="wrap">
   <div>
     <h2>Our promise</h2>
     <p class="muted" style="margin-top:10px">প্রতিটি কাজে, কোটেশনেও লেখা থাকে।</p>
@@ -282,23 +308,24 @@
   </div>
 </div></section>
 
-<section id="faq" class="alt"><div class="wrap">
+<section id="faq"><div class="wrap">
   <div class="sh"><h2>FAQ</h2></div>
   <div class="faq">
-    <details><summary>আপনারা কি থিসিস বা রিপোর্ট লিখে দেন?</summary><p>না। আমরা শুধু formatting, design আর রূপান্তরের কাজ করি। লেখা ও গবেষণা আপনার নিজের, তাই ভার্সিটি বা অফিসে কোনো সমস্যা হয় না।</p></details>
+    <details><summary>আপনারা কি থিসিস বা রিপোর্ট লিখে দেন?</summary><p>না। আমরা শুধু formatting, presentation design আর রূপান্তরের কাজ করি। লেখা ও গবেষণা আপনার নিজের, তাই ভার্সিটি বা অফিসে কোনো সমস্যা হয় না।</p></details>
     <details><summary>টাকা কীভাবে দেব?</summary><p>দাম confirm হলে 20% advance bKash-এ, preview দেখে বাকিটা। প্রতিষ্ঠান কোটেশন ও কার্যাদেশ অনুযায়ী ব্যাংক বা চেকে দিতে পারে।</p></details>
     <details><summary>সরকারি দপ্তর থেকে কাজ দিতে কী লাগবে?</summary><p>নথির কপি ও প্রয়োজনীয় ফরম্যাট জানালেই লিখিত কোটেশন পাঠাই। কার্যাদেশ পাওয়ার পর কাজ শুরু, কাজ শেষে বিল।</p></details>
     <details><summary>আমার ভার্সিটি / অফিসের নিয়ম জানবেন কীভাবে?</summary><p>Guideline বা আগের কোনো অনুমোদিত কপি পাঠান, আমরা হুবহু সেই নিয়মে সাজাই।</p></details>
     <details><summary>বিজয়ে লেখা পুরনো file কি Unicode করা যাবে?</summary><p>হ্যাঁ। SutonnyMJ / বিজয়ের লেখা Unicode-এ রূপান্তর করে নিকস বা সোলায়মানলিপি ফন্টে সাজাই, যুক্তবর্ণ ও বানান মিলিয়ে দেখি। প্রথম ২০ পৃষ্ঠা ফ্রি।</p></details>
-    <details><summary>Banner / flyer-এর জন্য কী পাঠাব? ছাপিয়েও দেন?</summary><p>লেখা (title, তারিখ, ঠিকানা), logo, ছবি আর size পাঠান (যেমন banner 6×3 ft)। আমরা print-ready file (PDF, CMYK) দিই, যেকোনো press থেকে ছাপাতে পারবেন। ছাপার খরচ দামে ধরা নেই।</p></details>
+    <details><summary>কত দিনে পাব? Urgent হলে?</summary><p>সাধারণত 24–72 ঘণ্টা; বড় report-এ file দেখে তারিখ লিখে দিই। Urgent লাগলে +30–40% চার্জে আগে দিই। দেরি হলে ২০% টাকা ফেরত।</p></details>
+    <details><summary>File কীভাবে পাঠাব?</summary><p>WhatsApp-এ সরাসরি, email-এ, অথবা Google Drive link। Word file হলে সবচেয়ে ভালো; PDF বা ছবি থেকেও কাজ করি।</p></details>
     <details><summary>Do you work with NGOs and INGOs in English?</summary><p>Yes. We format donor reports, annual reports and policy briefs in English and Bangla, following your brand and donor visibility guidelines. Email us for a formal quotation within 24 hours.</p></details>
   </div>
 </div></section>
 
 <section id="order" class="order"><div class="wrap">
-  <h2 data-wa="WhatsApp-এ order দিন">৩–৪ মিনিটে order দিন</h2>
-  <p class="lead" data-wa="কী কাজ লাগবে লিখুন আর file পাঠান, দাম ও তারিখ লিখিতভাবে জানাব।">Service বাছুন, file দিন, সাথে সাথে estimate দেখুন। প্রশ্ন থাকলে সরাসরি WhatsApp করুন।</p>
-  <div class="cta"><a class="btn" href="order.html" data-wa="WhatsApp-এ order দিন">Order শুরু করুন</a><a class="btn ghost js-wa" href="#" data-wa-hide>WhatsApp-এ জিজ্ঞেস করুন</a></div>
+  <h2 data-wa="১ মিনিটে দাম জেনে order দিন">৩–৪ মিনিটে order দিন</h2>
+  <p class="lead" data-wa="Chat-এ কাজটা বলুন, সাথে সাথে estimate পাবেন। তারপর WhatsApp-এ file পাঠান — দাম ও তারিখ লিখিতভাবে জানাব।">Service বাছুন, file দিন, সাথে সাথে estimate দেখুন। প্রশ্ন থাকলে সরাসরি WhatsApp করুন।</p>
+  <div class="cta"><button class="btn js-chat" type="button">দাম জানুন ও order দিন</button><a class="btn ghost js-wa" href="#" target="_blank" rel="noopener">WhatsApp-এ কথা বলুন</a></div>
   <ul class="contact">
     <li><a class="js-tel" href="#">01782-761981</a></li>
     <li><a class="js-mail" href="#">formatbdteam@gmail.com</a></li>
@@ -311,14 +338,13 @@
 
 <footer><div class="wrap">
   <a class="logo" href="./" style="color:#fff"><span class="wm">Format<b>BD</b></span></a>
-  <nav aria-label="Footer"><a href="#services">Prices</a><a href="#faq">FAQ</a><a href="#order">Contact</a><a class="earn" href="partner.html">Refer &amp; Earn 20%</a></nav>
+  <nav aria-label="Footer"><a href="#samples">Samples</a><a href="#services">Prices</a><a href="#faq">FAQ</a><a href="#order">Contact</a><a class="earn" href="partner.html">Refer &amp; Earn 20%</a></nav>
   <small>We format and design — we never write your content. · ঢাকা, বাংলাদেশ · © 2026 FormatBD</small>
 </div></footer>
-<a class="float js-wa" href="#" aria-label="WhatsApp-এ message করুন"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></svg></a>
 
 <script>
   // Contact details — written by ops/build.py from config.json
-  const C = {"wa": "8801782761981", "email": "formatbdteam@gmail.com", "fb": "profile.php?id=61596278724692", "sbUrl": "https://mepwncbscyceeyoxgvda.supabase.co", "sbKey": "sb_publishable_hM7CJC9fcQ2uOZyHIxdnSQ_53WIUaNk", "refPct": 10, "commPct": 20, "cookieDays": 30, "payoutMin": 300, "payoutDay": "বৃহস্পতিবার", "group": "", "kit": ["Thesis / report-এর formatting নিয়ে টেনশন? 😅 FormatBD পুরো formatting করে দেয় — page number, table of contents, cover, references সব ঠিকঠাক। Student package ৳1,200 থেকে। আমার code {CODE} দিলে 10% ছাড়: {LINK}", "অফিস বা NGO-র report, annual report বা meeting presentation professional look-এ দরকার? FormatBD Bangla-English দুই ভাষাতেই কাজ করে, সময়মতো delivery না হলে 20% refund। Code {CODE} দিলে 10% ছাড়: {LINK}", "Banner, flyer, poster, social post বা certificate design লাগবে? FormatBD-তে design ৳500 থেকে, print-ready file দেয়। আমার code {CODE} দিয়ে 10% কম দামে order করুন: {LINK}"]};
+  const C = {"wa": "8801782761981", "email": "formatbdteam@gmail.com", "fb": "profile.php?id=61596278724692", "sbUrl": "https://mepwncbscyceeyoxgvda.supabase.co", "sbKey": "sb_publishable_hM7CJC9fcQ2uOZyHIxdnSQ_53WIUaNk", "refPct": 10, "commPct": 20, "cookieDays": 30, "payoutMin": 300, "payoutDay": "বৃহস্পতিবার", "group": "", "kit": ["Thesis / report-এর formatting নিয়ে টেনশন? 😅 FormatBD পুরো formatting করে দেয় — page number, table of contents, cover, references সব ঠিকঠাক। Student package ৳1,200 থেকে। আমার code {CODE} দিলে 10% ছাড়: {LINK}", "অফিস বা NGO-র report, annual report বা meeting presentation professional look-এ দরকার? FormatBD Bangla-English দুই ভাষাতেই কাজ করে, সময়মতো delivery না হলে 20% refund। Code {CODE} দিলে 10% ছাড়: {LINK}", "অফিস মিটিং, ডোনার বা থিসিস ডিফেন্সের presentation দরকার? FormatBD আপনার data থেকে chart সহ clean slides বানিয়ে দেয়, ৳1,500 থেকে। আমার code {CODE} দিয়ে 10% কম দামে order করুন: {LINK}"]};
   // old partner links (#earn, #terms) now live on partner.html
   if (/^#(earn|terms)$/.test(location.hash)) location.replace("partner.html" + location.search + location.hash);
   const waLink = t => "https://wa.me/" + C.wa + "?text=" + encodeURIComponent(t);
@@ -331,10 +357,14 @@
   // every link to order.html opens WhatsApp instead, with the package name filled in
   const ORDER_LIVE = false;
   if (!ORDER_LIVE) {
-    document.querySelectorAll('a[href^="order.html"]').forEach(a => {
-      const nm = a.querySelector(".nm"), pkg = nm ? nm.firstChild.textContent.trim() : "";
-      a.href = waLink("আসসালামু আলাইকুম, FormatBD — " + (pkg ? pkg + " order করতে চাই।" : "একটি order দিতে চাই।"));
-      a.target = "_blank"; a.rel = "noopener";
+    // price rows + chat buttons open the chat assistant (assets/chat.js); WhatsApp if it hasn't loaded
+    document.addEventListener("click", e => {
+      const a = e.target.closest('a[href^="order.html"], .js-chat');
+      if (!a) return;
+      e.preventDefault();
+      const pkg = a.dataset.pkg || (a.getAttribute("href") || "").split("pkg=")[1] || "";
+      if (window.fbdChat) window.fbdChat.open(pkg);
+      else window.open(waLink("আসসালামু আলাইকুম, FormatBD — একটি order দিতে চাই।"), "_blank");
     });
     document.querySelectorAll("[data-wa]").forEach(el => el.textContent = el.dataset.wa);
     document.querySelectorAll("[data-wa-hide]").forEach(el => el.hidden = true);
@@ -346,7 +376,13 @@
   if (urlRef) store.set("fbd_ref", { code: urlRef, t: Date.now() });
   // orders placed from this browser → links back to their job pages
   const mine = store.get("fbd_jobs") || [], mj = document.getElementById("my-jobs");
+  // samples: Report / Presentation tabs + before/after sliders
+  document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".tabs button").forEach(x => { const on = x === b; x.setAttribute("aria-selected", on); document.getElementById(x.getAttribute("aria-controls")).hidden = !on; });
+  }));
+  document.querySelectorAll(".cmp input").forEach(r => r.addEventListener("input", () => r.parentNode.style.setProperty("--p", r.value + "%")));
   if (mine.length) { mj.hidden = false; mj.innerHTML = "আপনার order: " + mine.slice(0, 5).map(j => `<a href="job.html?t=${encodeURIComponent(j.token)}">${String(j.id).replace(/[<>&"]/g, "")}</a>`).join(" · "); }
 </script>
+<script type="module" src="assets/chat.js?v=4"></script>
 </body>
 </html>

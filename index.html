@@ -4,265 +4,179 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FormatBD — Report &amp; Presentation Formatting in Bangladesh</title>
-<meta name="description" content="Report, thesis and presentation formatting in Bangladesh. Fixed prices: report from ৳1,200, presentation from ৳1,500. Bangla &amp; English, Word + PDF, 2 free revisions. For govt offices, NGOs and students.">
+<meta name="description" content="Report, thesis and presentation formatting in Bangladesh. Fixed prices: report from ৳1,200, presentation from ৳1,500. Bangla &amp; English, Word + PDF, 2 free revisions.">
 <meta property="og:title" content="FormatBD — Report &amp; Presentation Formatting">
 <meta property="og:description" content="Report formatting from ৳1,200 · Presentation from ৳1,500 · See before/after samples">
 <meta property="og:image" content="https://ashikul04.github.io/formatbd/assets/samples/gov-report-after.jpg">
 <meta name="theme-color" content="#13294B">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --navy:#13294B; --green:#0B7A54; --green2:#12A06E; --amber:#F5A524; --paper:#F7F5F0; --ink:#1E2329; --muted:#5A6472; --line:#E4E0D6; --head:'Poppins','Hind Siliguri',sans-serif; }
+  :root { --navy:#13294B; --green:#0B7A54; --green2:#12A06E; --paper:#F7F5F0; --ink:#1E2329; --muted:#5A6472; --line:#E4E0D6; --head:'Poppins','Hind Siliguri',sans-serif; }
   * { box-sizing:border-box; margin:0; padding:0; }
   [hidden] { display:none !important; }
   html { scroll-behavior:smooth; scroll-padding-top:72px; }
-  body { font-family:'Hind Siliguri',sans-serif; color:var(--ink); background:#fff; line-height:1.7; font-size:17px; -webkit-font-smoothing:antialiased; }
+  body { font-family:'Hind Siliguri',sans-serif; color:var(--ink); background:#fff; line-height:1.6; font-size:17px; -webkit-font-smoothing:antialiased; }
   a { color:inherit; text-underline-offset:3px; }
-  ::selection { background:#CDEBDD; color:var(--navy); }
   :focus-visible { outline:2px solid var(--green2); outline-offset:3px; border-radius:4px; }
-  .wrap { max-width:1120px; margin:0 auto; padding:0 20px; }
-  h1, h2, h3 { font-family:var(--head); color:var(--navy); line-height:1.2; letter-spacing:-.02em; text-wrap:balance; }
-  h2 { font-size:clamp(28px, 3.2vw, 38px); }
-  p, li { text-wrap:pretty; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+  h1, h2, h3 { font-family:var(--head); color:var(--navy); line-height:1.15; letter-spacing:-.02em; text-wrap:balance; }
+  h2 { font-size:clamp(26px, 3vw, 34px); text-align:center; margin-bottom:32px; }
   .wm { font-family:'Poppins',sans-serif; font-weight:700; letter-spacing:-.02em; } .wm b { color:var(--green2); }
-  .muted { color:var(--muted); }
-
-  .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; background:var(--green); color:#fff; text-decoration:none; padding:0 24px; border-radius:8px; border:2px solid var(--green); font:600 16.5px 'Hind Siliguri',sans-serif; transition:background .15s, border-color .15s; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; min-height:46px; background:var(--green); color:#fff; text-decoration:none; padding:0 22px; border-radius:8px; border:2px solid var(--green); font:600 16px 'Hind Siliguri',sans-serif; cursor:pointer; transition:background .15s; }
   .btn:hover { background:#096544; border-color:#096544; }
-  .btn.ghost { background:transparent; color:var(--navy); border-color:#CFC9BB; }
-  .btn.ghost:hover { border-color:var(--navy); background:#fff; }
+  .btn.ghost { background:transparent; color:#fff; border-color:rgba(255,255,255,.4); } .btn.ghost:hover { border-color:#fff; }
 
-  .offer-bar { background:#FFF4DC; color:#6B4400; text-align:center; font-weight:600; font-size:14.5px; padding:8px 16px; }
+  .offer-bar { background:#FFF4DC; color:#6B4400; text-align:center; font-weight:600; font-size:14px; padding:7px 16px; }
   header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
-  header .wrap { display:flex; align-items:center; justify-content:space-between; height:64px; gap:16px; }
-  .logo { display:flex; align-items:center; gap:4px; text-decoration:none; font-size:23px; color:var(--navy); }
-  .logo img { width:32px; height:32px; }
-  nav { display:flex; align-items:center; gap:28px; }
-  nav a:not(.btn) { text-decoration:none; font-weight:500; color:var(--muted); }
-  nav a:not(.btn):hover { color:var(--navy); }
-  nav .btn { min-height:42px; padding:0 18px; font-size:15.5px; }
+  header .wrap { display:flex; align-items:center; justify-content:space-between; height:62px; }
+  .logo { display:flex; align-items:center; gap:4px; text-decoration:none; font-size:22px; color:var(--navy); } .logo img { width:30px; height:30px; }
+  nav { display:flex; align-items:center; gap:26px; }
+  nav a { text-decoration:none; font-weight:500; color:var(--muted); } nav a:hover { color:var(--navy); }
 
-  /* hero */
-  .hero { background:var(--paper); padding:72px 0 80px; overflow:hidden; }
-  .hero .wrap { display:grid; grid-template-columns:1.2fr .8fr; gap:56px; align-items:center; }
-  .hero h1 { font-size:clamp(38px, 4.8vw, 58px); line-height:1.08; letter-spacing:-.03em; }
-  .hero .tag { font-size:clamp(20px, 2vw, 24px); font-weight:600; color:var(--green); margin:14px 0 10px; }
-  .hero .lead { font-size:18px; color:#3C4550; max-width:30em; }
-  .svc { list-style:none; display:grid; grid-template-columns:repeat(2,1fr); margin:28px 0; background:#fff; border:1px solid var(--line); border-radius:10px; }
-  .svc li + li { border-left:1px solid var(--line); }
-  .svc a { display:block; padding:12px 14px; text-decoration:none; line-height:1.35; font-weight:600; font-size:15.5px; color:var(--navy); white-space:nowrap; }
-  .svc a:hover { background:#F4FAF7; }
-  .svc span { display:block; font-weight:400; font-size:14.5px; color:var(--muted); }
-  .svc b { color:var(--green); font-size:17px; }
-  .cta { display:flex; gap:12px; flex-wrap:wrap; }
-  .facts { list-style:none; display:flex; flex-wrap:wrap; gap:6px 22px; margin-top:22px; font-size:15px; color:var(--muted); }
-  .facts li::before { content:""; display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--green2); margin-right:8px; vertical-align:2px; }
-  .facts b { color:var(--navy); font-weight:600; }
+  /* hero: the two options */
+  .hero { background:var(--paper); padding:64px 0 72px; text-align:center; }
+  .hero h1 { font-size:clamp(34px, 5vw, 56px); }
+  .hero .sub { font-size:19px; color:var(--muted); margin:12px 0 40px; }
+  .pick { display:grid; grid-template-columns:1fr 1fr; gap:28px; max-width:900px; margin:0 auto; }
+  .opt { display:flex; flex-direction:column; background:#fff; border:2px solid var(--line); border-radius:16px; overflow:hidden; text-decoration:none; text-align:left; transition:border-color .15s, transform .15s, box-shadow .15s; }
+  .opt:hover { border-color:var(--green2); transform:translateY(-3px); box-shadow:0 18px 40px rgba(19,41,75,.12); }
+  .thumb { height:220px; overflow:hidden; background:#EDEAE2; border-bottom:1px solid var(--line); }
+  .thumb img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
+  .opt-b { padding:22px 24px 24px; display:flex; flex-direction:column; gap:4px; flex:1; }
+  .opt h3 { font-size:26px; }
+  .opt .for { color:var(--muted); font-size:16px; }
+  .opt .go { display:flex; justify-content:space-between; align-items:center; margin-top:16px; }
+  .opt .price { font-size:16px; color:var(--muted); } .opt .price b { font:700 24px Poppins,sans-serif; color:var(--navy); }
+  .opt .cta { background:var(--green); color:#fff; font-weight:600; padding:9px 18px; border-radius:8px; }
+  .opt:hover .cta { background:#096544; }
+  .facts { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:6px 26px; margin-top:32px; font-size:15.5px; color:var(--muted); }
+  .facts li::before { content:"✓"; color:var(--green2); font-weight:700; margin-right:6px; }
 
-  .sheet { background:#fff; border:1px solid #DAD5C8; box-shadow:0 20px 44px rgba(19,41,75,.12); padding:32px 32px 28px; position:relative; aspect-ratio:1/1.32; max-width:410px; justify-self:end; width:100%; }
-  .sheet .org { font-size:12px; color:var(--muted); text-align:center; letter-spacing:.04em; }
-  .sheet .t { font-family:'Tiro Bangla',serif; text-align:center; color:var(--navy); font-size:20px; margin:4px 0 2px; }
-  .sheet .y { text-align:center; font-size:13px; color:var(--muted); margin-bottom:16px; }
-  .sheet .rule { height:2px; background:var(--navy); margin:0 0 14px; }
-  .sheet .toc-h { font-family:'Tiro Bangla',serif; font-size:16px; color:var(--navy); margin-bottom:6px; }
-  .toc { list-style:none; font-size:13.5px; }
-  .toc li { display:flex; align-items:baseline; gap:6px; padding:3px 0; }
-  .toc li span:nth-child(2) { flex:1; border-bottom:1px dotted #9AA3AF; transform:translateY(-4px); }
-  .toc li.sub { padding-left:16px; color:var(--muted); }
-  .sheet .stamp { position:absolute; right:22px; bottom:20px; display:flex; align-items:center; gap:6px; font-size:12px; color:var(--green); font-weight:600; }
-  .sheet .stamp img { width:22px; height:22px; }
-  .slide { position:absolute; left:-60px; bottom:-30px; width:230px; aspect-ratio:16/9; background:var(--navy); border-radius:6px; padding:14px 16px 12px; box-shadow:0 14px 30px rgba(19,41,75,.28); display:flex; flex-direction:column; }
-  .slide .st { font-family:'Tiro Bangla',serif; color:#fff; font-size:14px; line-height:1.2; }
-  .slide .ss { color:#9FB0C8; font-size:10.5px; margin-bottom:auto; }
-  .slide .bars { display:flex; align-items:flex-end; gap:9px; height:48%; border-bottom:1px solid rgba(255,255,255,.25); }
-  .slide .bars i { flex:1; background:#2BC48A; border-radius:2px 2px 0 0; }
-  .slide .bars i:nth-child(odd) { background:#C4D0E2; }
-
-  section { padding:88px 0; }
-  .sh { max-width:640px; margin-bottom:40px; }
-  .sh p { color:var(--muted); margin-top:10px; font-size:17.5px; }
+  section { padding:80px 0; }
   .alt { background:var(--paper); }
 
-  /* prices */
-  .menu { display:grid; grid-template-columns:repeat(2,1fr); gap:56px; align-items:start; }
-  .col-h { padding-bottom:12px; border-bottom:2px solid var(--navy); }
-  .col h3 { font-size:22px; }
-  .col-h p { color:var(--muted); font-size:15px; line-height:1.55; margin-top:6px; }
-  .rows { list-style:none; }
-  .row { display:flex; justify-content:space-between; align-items:center; gap:14px; text-decoration:none; padding:13px 26px 13px 0; border-bottom:1px solid var(--line); position:relative; }
-  .row::after { content:""; position:absolute; right:6px; top:50%; width:7px; height:7px; border-right:2px solid #A9B0BA; border-top:2px solid #A9B0BA; transform:translateY(-50%) rotate(45deg); transition:right .15s, border-color .15s; }
-  .row:hover::after { right:2px; border-color:var(--green); }
-  .row:hover .nm { color:var(--green); }
-  .nm { font-weight:600; color:var(--navy); font-size:16px; line-height:1.35; }
-  .nm small { display:block; font-weight:400; color:var(--muted); font-size:13.5px; margin-top:2px; }
-  .pr { text-align:right; white-space:nowrap; line-height:1.25; font-variant-numeric:tabular-nums; }
-  .pr s { display:block; color:#687280; font-size:13px; }
-  .pr b { color:var(--navy); font-size:18px; }
-  .deals { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px 40px; margin-top:44px; padding:20px 24px; background:#FFF8E8; border-radius:10px; }
-  .deals li { display:flex; gap:12px; align-items:baseline; font-size:15px; color:#5A4A2A; line-height:1.5; }
-  .deals b { font-family:'Poppins',sans-serif; font-size:13px; color:#fff; background:var(--navy); border-radius:4px; padding:2px 8px; white-space:nowrap; }
-  .deals strong { color:var(--navy); }
-  .menu-note { margin-top:16px; color:var(--muted); font-size:14.5px; }
-
-  /* how it works */
-  .steps { list-style:none; display:grid; grid-template-columns:repeat(4,1fr); gap:32px; counter-reset:s; }
-  .steps li { border-top:2px solid var(--line); padding-top:18px; counter-increment:s; }
-  .steps li::before { content:counter(s); display:block; font-family:'Poppins',sans-serif; font-weight:700; font-size:28px; color:var(--green); line-height:1; margin-bottom:12px; }
-  .steps li:first-child { border-top-color:var(--green2); }
-  .steps b { display:block; color:var(--navy); font-size:18px; margin-bottom:4px; }
-  .steps span { color:var(--muted); font-size:15.5px; }
-
   /* samples */
-  .tabs { display:inline-flex; background:#fff; border:1px solid var(--line); border-radius:10px; padding:4px; margin-bottom:28px; }
-  .tabs button { border:0; background:none; font:600 16px 'Hind Siliguri',sans-serif; color:var(--muted); padding:8px 20px; border-radius:7px; cursor:pointer; }
+  .tabs { display:flex; justify-content:center; margin:-12px 0 28px; }
+  .tabs div { display:inline-flex; background:#fff; border:1px solid var(--line); border-radius:10px; padding:4px; }
+  .tabs button { border:0; background:none; font:600 15.5px 'Hind Siliguri',sans-serif; color:var(--muted); padding:7px 18px; border-radius:7px; cursor:pointer; }
   .tabs button[aria-selected="true"] { background:var(--navy); color:#fff; }
-  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
   .grid.sl { grid-template-columns:1fr 1fr; } .grid.sl .card:first-child { grid-column:1/-1; }
-  .cmp { position:relative; overflow:hidden; border:1px solid #DAD5C8; border-radius:6px; box-shadow:0 12px 30px rgba(19,41,75,.10); background:#fff; --p:50%; user-select:none; }
+  .cmp { position:relative; overflow:hidden; border:1px solid #DAD5C8; border-radius:6px; box-shadow:0 10px 26px rgba(19,41,75,.08); background:#fff; --p:50%; user-select:none; }
   .cmp img { display:block; width:100%; height:auto; }
   .cmp .bf { position:absolute; inset:0; clip-path:inset(0 calc(100% - var(--p)) 0 0); }
   .cmp .bar { position:absolute; top:0; bottom:0; left:var(--p); width:3px; margin-left:-1.5px; background:var(--green2); pointer-events:none; }
-  .cmp .bar::after { content:"\2039 \203A"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:38px; height:38px; border-radius:50%; background:var(--green2); color:#fff; font:700 15px/38px Poppins,sans-serif; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,.2); }
+  .cmp .bar::after { content:"\2039 \203A"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:36px; height:36px; border-radius:50%; background:var(--green2); color:#fff; font:700 15px/36px Poppins,sans-serif; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,.2); }
   .cmp input { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; margin:0; }
-  .cmp .lb { position:absolute; top:10px; font:600 12.5px Poppins,sans-serif; color:#fff; padding:3px 9px; border-radius:4px; pointer-events:none; }
+  .cmp .lb { position:absolute; top:10px; font:600 12px Poppins,sans-serif; color:#fff; padding:3px 9px; border-radius:4px; pointer-events:none; }
   .cmp .lb.l { left:10px; background:rgba(150,40,40,.85); } .cmp .lb.r { right:10px; background:var(--green); }
-  .card figcaption { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:12px; font-size:15px; color:var(--muted); line-height:1.45; }
-  .card figcaption b { display:block; color:var(--navy); font-size:16.5px; }
-  .card figcaption button { flex:none; border:0; background:none; color:var(--green); font:600 15px 'Hind Siliguri',sans-serif; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
-  .samp-note { margin-top:22px; font-size:14px; color:var(--muted); }
-  button.btn { cursor:pointer; }
+  .card figcaption { margin-top:10px; font-weight:600; color:var(--navy); font-size:15.5px; text-align:center; }
 
-  /* promise */
-  .promises { list-style:none; display:grid; grid-template-columns:repeat(4,1fr); gap:24px 32px; margin-top:28px; }
-  .promises b { display:block; color:var(--navy); font-size:17px; }
-  .promises span { color:var(--muted); font-size:15.5px; }
+  /* prices (rows written by ops/build.py) */
+  .menu { display:grid; grid-template-columns:1fr 1fr; gap:48px; max-width:940px; margin:0 auto; }
+  .col-h { padding-bottom:10px; border-bottom:2px solid var(--navy); } .col h3 { font-size:21px; } .col-h p { display:none; }
+  .rows { list-style:none; }
+  .row { display:flex; justify-content:space-between; align-items:center; gap:14px; text-decoration:none; padding:12px 24px 12px 0; border-bottom:1px solid var(--line); position:relative; }
+  .row::after { content:""; position:absolute; right:6px; top:50%; width:7px; height:7px; border-right:2px solid #A9B0BA; border-top:2px solid #A9B0BA; transform:translateY(-50%) rotate(45deg); }
+  .row:hover .nm { color:var(--green); } .row:hover::after { border-color:var(--green); }
+  .nm { font-weight:600; color:var(--navy); font-size:16px; line-height:1.35; }
+  .nm small { display:block; font-weight:400; color:var(--muted); font-size:13.5px; }
+  .pr { text-align:right; white-space:nowrap; line-height:1.25; }
+  .pr s { display:block; color:#7A8390; font-size:13px; } .pr b { color:var(--navy); font-size:18px; }
+  .deals { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin:36px auto 0; }
+  .deals li { background:#FFF4DC; color:#6B4400; border-radius:20px; padding:5px 14px; font-size:14.5px; } .deals b { color:var(--navy); margin-right:4px; }
+  .menu-note { text-align:center; margin-top:14px; color:var(--muted); font-size:14px; }
+
+  /* steps */
+  .steps { list-style:none; display:grid; grid-template-columns:repeat(3,1fr); gap:28px; max-width:900px; margin:0 auto; counter-reset:s; text-align:center; }
+  .steps li { counter-increment:s; font-size:16.5px; color:var(--muted); }
+  .steps li::before { content:counter(s); display:grid; place-items:center; width:44px; height:44px; margin:0 auto 12px; border-radius:50%; background:var(--navy); color:#fff; font:700 19px Poppins,sans-serif; }
+  .steps b { display:block; color:var(--navy); font-size:18px; }
 
   /* faq */
-  .faq { max-width:760px; border-top:1px solid var(--line); }
+  .faq { max-width:720px; margin:0 auto; border-top:1px solid var(--line); }
   details { border-bottom:1px solid var(--line); }
-  summary { cursor:pointer; font-weight:600; color:var(--navy); font-size:17.5px; padding:18px 0; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  summary { cursor:pointer; font-weight:600; color:var(--navy); font-size:17px; padding:16px 0; list-style:none; display:flex; justify-content:space-between; gap:16px; }
   summary::-webkit-details-marker { display:none; }
-  summary::after { content:""; flex:none; width:9px; height:9px; border-right:2px solid var(--green); border-bottom:2px solid var(--green); transform:rotate(45deg) translateY(-3px); transition:transform .2s; }
-  details[open] summary::after { transform:rotate(-135deg) translateY(-3px); }
-  details p { padding:0 0 18px; color:#3C4550; max-width:65ch; }
+  summary::after { content:"+"; color:var(--green); font-size:22px; line-height:1; }
+  details[open] summary::after { content:"–"; }
+  details p { padding:0 0 16px; color:#3C4550; }
 
-  /* order */
   .order { background:var(--navy); color:#C9D3E3; text-align:center; }
-  .order h2 { color:#fff; }
-  .order .lead { font-size:18px; margin:12px auto 30px; max-width:34em; }
-  .order .cta { justify-content:center; }
-  .order .btn.ghost { color:#fff; border-color:rgba(255,255,255,.35); }
-  .order .btn.ghost:hover { border-color:#fff; background:rgba(255,255,255,.06); }
-  .contact { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:8px 28px; margin-top:36px; font-size:15.5px; }
-  .contact a { color:#fff; text-decoration:none; font-weight:600; } .contact a:hover { text-decoration:underline; }
-  #my-jobs { margin-top:18px; font-size:15px; } #my-jobs a { color:#fff; }
+  .order h2 { color:#fff; margin-bottom:24px; }
+  .order .cta { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .contact { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:6px 26px; margin-top:28px; font-size:15px; }
+  .contact a { color:#fff; text-decoration:none; font-weight:600; }
+  #my-jobs { margin-top:16px; font-size:15px; } #my-jobs a { color:#fff; }
+  footer { background:#0E1E37; color:#8494AE; padding:24px 0; font-size:14px; }
+  footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px 24px; }
+  footer a { color:#C9D3E3; text-decoration:none; } footer a.earn { color:#F5A524; font-weight:600; }
 
-  footer { background:#0E1E37; color:#AFBBD0; padding:36px 0; font-size:15px; }
-  footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 32px; align-items:center; }
-  footer nav { gap:22px; flex-wrap:wrap; }
-  footer nav a:not(.btn) { color:#E3E9F2; }
-  footer nav a.earn { color:var(--amber); font-weight:600; }
-  footer small { flex-basis:100%; font-size:13.5px; color:#8494AE; }
-  .float { position:fixed; right:16px; bottom:16px; width:54px; height:54px; border-radius:50%; background:#1F9E55; display:grid; place-items:center; box-shadow:0 6px 20px rgba(0,0,0,.22); z-index:20; transition:transform .15s; }
-  .float:hover { transform:translateY(-2px); }
-  .float svg { width:28px; height:28px; fill:#fff; }
-
-  @media (max-width:900px) {
-    .hero { padding:48px 0 64px; }
-    .hero .wrap { grid-template-columns:1fr; gap:48px; }
-    .grid, .grid.sl, .promises { grid-template-columns:1fr 1fr; }
-    .sheet { justify-self:center; max-width:340px; }
-    .slide { left:-14px; width:190px; }
-    .menu, .deals { grid-template-columns:1fr; } .menu { gap:48px; }
-    .steps { grid-template-columns:1fr 1fr; }
-    nav a:not(.btn) { display:none; }
-    footer nav a:not(.btn) { display:inline; }
-    section { padding:64px 0; }
+  @media (max-width:820px) {
+    .pick, .menu { grid-template-columns:1fr; } .menu { gap:40px; }
+    .grid { grid-template-columns:1fr 1fr; }
+    .thumb { height:180px; }
+    nav a:not(:last-child) { display:none; }
+    section { padding:60px 0; }
   }
   @media (max-width:560px) {
     body { font-size:16px; }
-    .svc { grid-template-columns:1fr; }
-    .svc li + li { border-left:0; border-top:1px solid var(--line); }
-    .svc a { display:flex; justify-content:space-between; align-items:baseline; }
-    .cta .btn { flex:1 1 100%; }
-    .steps, .promises, .grid, .grid.sl { grid-template-columns:1fr; gap:24px; }
-    .sheet { padding:24px 20px; }
-    .offer-bar { font-size:13.5px; }
+    .hero { padding:28px 0 44px; } .hero h1 { font-size:30px; } .hero .sub { margin:8px 0 22px; font-size:17px; }
+    .pick { gap:16px; } .thumb { height:96px; } .opt-b { padding:14px 16px 16px; }
+    .opt h3 { font-size:21px; } .opt .for { font-size:14.5px; } .opt .go { margin-top:8px; }
+    .opt .price b { font-size:21px; } .opt .cta { padding:7px 14px; font-size:15px; }
+    .offer-bar { font-size:13px; padding:6px 12px; }
+    .grid, .grid.sl, .steps { grid-template-columns:1fr; }
+    .order .btn { flex:1 1 100%; }
   }
   @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
 </style>
 </head>
 <body>
-<div class="offer-bar">November Offer: Thesis-এর সাথে Cover FREE · Report + Presentation combo 15% OFF · Office / NGO: 5 pages free sample — 30 Nov পর্যন্ত</div>
+<div class="offer-bar">November: Thesis-এর সাথে Cover FREE · Combo 15% OFF — 30 Nov পর্যন্ত</div>
 <header><div class="wrap">
   <a class="logo" href="./" aria-label="FormatBD home"><img src="assets/logo-icon.svg" alt=""><span class="wm">Format<b>BD</b></span></a>
-  <nav aria-label="Main"><a href="#samples">Samples</a><a href="#services">Prices</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a class="btn" href="order.html">Order দিন</a></nav>
+  <nav aria-label="Main"><a href="#samples">Samples</a><a href="#services">Prices</a><a href="#faq">FAQ</a><a class="js-wa" href="#" target="_blank" rel="noopener">WhatsApp</a></nav>
 </div></header>
 
 <main>
 <div class="hero"><div class="wrap">
-  <div>
-    <h1>Report &amp; Presentation Formatting</h1>
-    <p class="tag">লেখা আপনার, সাজানো আমাদের।</p>
-    <p class="lead">File পাঠান, 24–72 ঘণ্টায় সুন্দর করে সাজানো Word + PDF হাতে পান। দাম fixed, আগেই লেখা।</p>
-    <ul class="svc">
-      <li><a href="#svc-report">Report Formatting<span>from <b>৳1,200</b></span></a></li>
-      <li><a href="#svc-slides">Presentation<span>from <b>৳1,500</b></span></a></li>
-    </ul>
-    <div class="cta"><button class="btn js-chat" type="button">১ মিনিটে দাম জানুন</button><a class="btn ghost" href="#samples">Samples দেখুন</a></div>
-    <ul class="facts">
-      <li><b>24–72 ঘণ্টা</b> delivery</li>
-      <li><b>2 বার</b> free revision</li>
-      <li>মাত্র <b>20% advance</b></li>
-    </ul>
+  <h1>Report &amp; Presentation Formatting</h1>
+  <p class="sub">লেখা আপনার, সাজানো আমাদের।</p>
+  <div class="pick">
+    <a class="opt js-chat" data-svc="report" href="#svc-report">
+      <div class="thumb"><img src="assets/samples/gov-report-after.jpg" alt="Formatted report page sample"></div>
+      <div class="opt-b"><h3>Report Formatting</h3><span class="for">Thesis · Govt report · NGO report</span>
+        <div class="go"><span class="price">from <b>৳1,200</b></span><span class="cta">শুরু করুন →</span></div></div>
+    </a>
+    <a class="opt js-chat" data-svc="slides" href="#svc-slides">
+      <div class="thumb"><img src="assets/samples/gov-meeting-after.jpg" alt="Formatted presentation slide sample"></div>
+      <div class="opt-b"><h3>Presentation Formatting</h3><span class="for">Meeting · Donor · Thesis defence</span>
+        <div class="go"><span class="price">from <b>৳1,500</b></span><span class="cta">শুরু করুন →</span></div></div>
+    </a>
   </div>
-  <div class="sheet" aria-label="Sample formatted report page">
-    <div class="org">প্রকল্প বাস্তবায়ন ইউনিট</div>
-    <div class="t">প্রকল্প সমাপ্তি প্রতিবেদন</div>
-    <div class="y">অর্থবছর ২০২৫–২৬</div>
-    <div class="rule"></div>
-    <div class="toc-h">সূচিপত্র</div>
-    <ul class="toc">
-      <li><span>নির্বাহী সারসংক্ষেপ</span><span></span><span>i</span></li>
-      <li><span>১. প্রকল্পের পটভূমি</span><span></span><span>১</span></li>
-      <li class="sub"><span>১.১ উদ্দেশ্য ও পরিধি</span><span></span><span>২</span></li>
-      <li class="sub"><span>১.২ বাস্তবায়ন এলাকা</span><span></span><span>৪</span></li>
-      <li><span>২. অগ্রগতি ও অর্জন</span><span></span><span>৭</span></li>
-      <li class="sub"><span>২.১ লক্ষ্যমাত্রা বনাম অর্জন</span><span></span><span>৮</span></li>
-      <li><span>৩. আর্থিক বিবরণী</span><span></span><span>১৫</span></li>
-      <li><span>৪. শিক্ষা ও সুপারিশ</span><span></span><span>২১</span></li>
-      <li><span>পরিশিষ্ট</span><span></span><span>২৬</span></li>
-    </ul>
-    <div class="stamp"><img src="assets/logo-icon.svg" alt="">Formatted by FormatBD</div>
-    <div class="slide" aria-hidden="true"><div class="st">লক্ষ্যমাত্রা বনাম অর্জন</div><div class="ss">Slide 4 · Meeting presentation</div><div class="bars"><i style="height:45%"></i><i style="height:62%"></i><i style="height:70%"></i><i style="height:88%"></i><i style="height:80%"></i><i style="height:100%"></i></div></div>
-  </div>
+  <ul class="facts"><li>24–72 ঘণ্টা</li><li>2 বার free revision</li><li>20% advance</li><li>Word + PDF</li></ul>
 </div></div>
 
-<section id="samples" class="alt"><div class="wrap">
-  <div class="sh"><h2>Samples: আগে ও পরে</h2><p>একই লেখা — শুধু formatting বদলেছে। মাঝের দাগটা টেনে দেখুন।</p></div>
-  <div class="tabs" role="tablist"><button type="button" role="tab" aria-selected="true" aria-controls="g-rep">Report Formatting</button><button type="button" role="tab" aria-selected="false" aria-controls="g-sl">Presentation</button></div>
-<div class="grid rep" id="g-rep" role="tabpanel">
-<figure class="card"><div class="cmp"><img src="assets/samples/gov-report-after.jpg" alt="Govt project report — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/gov-report-before.jpg" alt="Govt project report — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Govt project report: before / after slider"></div>
-<figcaption><span><b>Govt project report</b>বাংলা · সারণি, চিত্র, header-footer · <a href="assets/samples/gov-report-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="gov-report">এমন চাই →</button></figcaption></figure>
-<figure class="card"><div class="cmp"><img src="assets/samples/ngo-report-after.jpg" alt="NGO / donor report — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/ngo-report-before.jpg" alt="NGO / donor report — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="NGO / donor report: before / after slider"></div>
-<figcaption><span><b>NGO / donor report</b>English · charts, stat boxes, donor style · <a href="assets/samples/ngo-report-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="ngo-report">এমন চাই →</button></figcaption></figure>
-<figure class="card"><div class="cmp"><img src="assets/samples/thesis-after.jpg" alt="Thesis table of contents — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/thesis-before.jpg" alt="Thesis table of contents — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Thesis table of contents: before / after slider"></div>
-<figcaption><span><b>Thesis table of contents</b>Auto TOC · i, ii → 1, 2 page numbers · <a href="assets/samples/thesis-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="stu-basic">এমন চাই →</button></figcaption></figure>
-</div>
-<div class="grid sl" id="g-sl" role="tabpanel" hidden>
-<figure class="card"><div class="cmp"><img src="assets/samples/gov-meeting-after.jpg" alt="Office meeting slide — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/gov-meeting-before.jpg" alt="Office meeting slide — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Office meeting slide: before / after slider"></div>
-<figcaption><span><b>Office meeting slide</b>লেখার দেয়াল → KPI + chart · <a href="assets/samples/gov-meeting-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="gov-meeting">এমন চাই →</button></figcaption></figure>
-<figure class="card"><div class="cmp"><img src="assets/samples/ngo-deck-after.jpg" alt="Donor presentation slide — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/ngo-deck-before.jpg" alt="Donor presentation slide — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Donor presentation slide: before / after slider"></div>
-<figcaption><span><b>Donor presentation slide</b>Pasted table → clear infographic · <a href="assets/samples/ngo-deck-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="ngo-deck">এমন চাই →</button></figcaption></figure>
-<figure class="card"><div class="cmp"><img src="assets/samples/defence-after.jpg" alt="Thesis defence slide — after formatting" loading="lazy"><div class="bf"><img src="assets/samples/defence-before.jpg" alt="Thesis defence slide — before formatting" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Thesis defence slide: before / after slider"></div>
-<figcaption><span><b>Thesis defence slide</b>Paragraph → step-by-step diagram · <a href="assets/samples/defence-after.jpg" target="_blank" rel="noopener">বড় করে দেখুন</a></span><button type="button" class="js-chat" data-pkg="stu-slides">এমন চাই →</button></figcaption></figure>
-</div>
-  <p class="samp-note">সব নমুনার নাম ও তথ্য কাল্পনিক। Client-এর file আমরা কখনো কাউকে দেখাই না। অফিস ও NGO: আপনার নিজের file-এর ৫ পেজ ফ্রি সাজিয়ে দেখাই।</p>
+<section id="samples"><div class="wrap">
+  <h2>আগে ও পরে</h2>
+  <div class="tabs"><div role="tablist"><button type="button" role="tab" aria-selected="true" aria-controls="g-rep">Report</button><button type="button" role="tab" aria-selected="false" aria-controls="g-sl">Presentation</button></div></div>
+  <div class="grid rep" id="g-rep" role="tabpanel">
+    <figure class="card"><div class="cmp"><img src="assets/samples/gov-report-after.jpg" alt="Govt report — after" loading="lazy"><div class="bf"><img src="assets/samples/gov-report-before.jpg" alt="Govt report — before" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Govt report: before / after"></div><figcaption>Govt report</figcaption></figure>
+    <figure class="card"><div class="cmp"><img src="assets/samples/ngo-report-after.jpg" alt="NGO report — after" loading="lazy"><div class="bf"><img src="assets/samples/ngo-report-before.jpg" alt="NGO report — before" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="NGO report: before / after"></div><figcaption>NGO report</figcaption></figure>
+    <figure class="card"><div class="cmp"><img src="assets/samples/thesis-after.jpg" alt="Thesis contents — after" loading="lazy"><div class="bf"><img src="assets/samples/thesis-before.jpg" alt="Thesis contents — before" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Thesis: before / after"></div><figcaption>Thesis</figcaption></figure>
+  </div>
+  <div class="grid sl" id="g-sl" role="tabpanel" hidden>
+    <figure class="card"><div class="cmp"><img src="assets/samples/gov-meeting-after.jpg" alt="Meeting slide — after" loading="lazy"><div class="bf"><img src="assets/samples/gov-meeting-before.jpg" alt="Meeting slide — before" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Meeting slide: before / after"></div><figcaption>Office meeting</figcaption></figure>
+    <figure class="card"><div class="cmp"><img src="assets/samples/ngo-deck-after.jpg" alt="Donor slide — after" loading="lazy"><div class="bf"><img src="assets/samples/ngo-deck-before.jpg" alt="Donor slide — before" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Donor slide: before / after"></div><figcaption>Donor presentation</figcaption></figure>
+    <figure class="card"><div class="cmp"><img src="assets/samples/defence-after.jpg" alt="Defence slide — after" loading="lazy"><div class="bf"><img src="assets/samples/defence-before.jpg" alt="Defence slide — before" loading="lazy"></div><span class="bar"></span><span class="lb l">Before</span><span class="lb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Defence slide: before / after"></div><figcaption>Thesis defence</figcaption></figure>
+  </div>
 </div></section>
 
-<section id="services"><div class="wrap">
-  <div class="sh"><h2>Prices</h2><p>Govt office, NGO বা student: যে কাজ লাগবে, তার পাশে দাম লেখা। যেকোনো লাইনে click করলে ১ মিনিটে estimate।</p></div>
+<section id="services" class="alt"><div class="wrap">
+  <h2>দাম</h2>
 <!--PRICING-->
 <div class="menu">
 <div class="col" id="svc-report"><div class="col-h"><h3>Report Formatting</h3><p>রিপোর্ট, থিসিস ও অফিসিয়াল ডকুমেন্ট — আপনার guideline মেনে সাজানো, Word + PDF।</p></div><ul class="rows">
@@ -280,66 +194,46 @@
 <li><a class="row" href="order.html?pkg=stu-defense"><span class="nm">Thesis + Defence Combo<small>formatting + cover + 15 slides</small></span><span class="pr"><s>৳4,550</s><b>৳3,200</b></span></a></li>
 </ul></div>
 </div>
-<ul class="deals"><li><b>FREE</b><span><strong>Cover Page</strong> — Thesis বা report formatting নিলে cover design ফ্রি।</span></li><li><b>15% OFF</b><span><strong>Combo / Group</strong> — Report + Presentation একসাথে, অথবা ৩ জন বন্ধু মিলে অর্ডার করলে।</span></li><li><b>5 Pages</b><span><strong>Free Sample</strong> — অফিস ও NGO: ৫ পেজ ফ্রি সাজিয়ে দেখাই, পছন্দ হলে তবেই অর্ডার।</span></li></ul>
-<p class="menu-note">দাম fixed — file দেখে final দাম confirm করি, list price-এর বেশি না (extra page/slide ছাড়া)। 20% advance · Urgent +30–40% · Printing খরচ আলাদা।</p>
+<ul class="deals"><li><b>FREE</b>Cover Page</li><li><b>15% OFF</b>Report + Presentation combo</li><li><b>5 Pages</b>Free sample (office/NGO)</li></ul>
+<p class="menu-note">দাম fixed · 20% advance · Urgent +30–40%</p>
 <!--/PRICING-->
 </div></section>
 
 <section id="process"><div class="wrap">
-  <div class="sh"><h2>How it works</h2><p>প্রথম click থেকে file হাতে পাওয়া পর্যন্ত, সবকিছু লিখিত।</p></div>
+  <h2>কীভাবে কাজ হয়</h2>
   <ol class="steps">
-    <li><b>Order দিন</b><span data-wa="WhatsApp-এ কী কাজ লাগবে জানান, file পাঠান।">Service বাছুন, file upload করুন, সাথে সাথে estimate দেখুন। ৩–৪ মিনিট।</span></li>
-    <li><b>দাম confirm</b><span>File দেখে final দাম ও তারিখ WhatsApp ও email-এ জানাই।</span></li>
-    <li><b>20% advance</b><span>bKash-এ advance দিলে সেদিনই কাজ শুরু।</span></li>
-    <li><b>Preview, তারপর file</b><span>Preview দেখে ঠিক থাকলে বাকি টাকা, তারপর Word + PDF আপনার।</span></li>
+    <li><b>File পাঠান</b>Chat বা WhatsApp-এ</li>
+    <li><b>দাম confirm</b>20% advance, bKash</li>
+    <li><b>Preview → file</b>Word + PDF আপনার</li>
   </ol>
 </div></section>
 
-<section class="alt"><div class="wrap">
-  <div>
-    <h2>Our promise</h2>
-    <p class="muted" style="margin-top:10px">প্রতিটি কাজে, কোটেশনেও লেখা থাকে।</p>
-    <ul class="promises">
-      <li><b>সময়মতো delivery</b><span>দেরি হলে ২০% টাকা ফেরত।</span></li>
-      <li><b>Guideline অনুযায়ী</b><span>নিয়ম না মানায় ফেরত এলে বিনা খরচে ঠিক করি।</span></li>
-      <li><b>সম্পূর্ণ গোপনীয়</b><span>আপনার file কারো সাথে share হয় না।</span></li>
-      <li><b>লিখিত কোটেশন ও বিল</b><span>অফিসের হিসাব শাখার জন্য আনুষ্ঠানিক কাগজ।</span></li>
-    </ul>
-  </div>
-</div></section>
-
-<section id="faq"><div class="wrap">
-  <div class="sh"><h2>FAQ</h2></div>
+<section id="faq" class="alt"><div class="wrap">
+  <h2>প্রশ্ন</h2>
   <div class="faq">
-    <details><summary>আপনারা কি থিসিস বা রিপোর্ট লিখে দেন?</summary><p>না। আমরা শুধু formatting, presentation design আর রূপান্তরের কাজ করি। লেখা ও গবেষণা আপনার নিজের, তাই ভার্সিটি বা অফিসে কোনো সমস্যা হয় না।</p></details>
-    <details><summary>টাকা কীভাবে দেব?</summary><p>দাম confirm হলে 20% advance bKash-এ, preview দেখে বাকিটা। প্রতিষ্ঠান কোটেশন ও কার্যাদেশ অনুযায়ী ব্যাংক বা চেকে দিতে পারে।</p></details>
-    <details><summary>সরকারি দপ্তর থেকে কাজ দিতে কী লাগবে?</summary><p>নথির কপি ও প্রয়োজনীয় ফরম্যাট জানালেই লিখিত কোটেশন পাঠাই। কার্যাদেশ পাওয়ার পর কাজ শুরু, কাজ শেষে বিল।</p></details>
-    <details><summary>আমার ভার্সিটি / অফিসের নিয়ম জানবেন কীভাবে?</summary><p>Guideline বা আগের কোনো অনুমোদিত কপি পাঠান, আমরা হুবহু সেই নিয়মে সাজাই।</p></details>
-    <details><summary>বিজয়ে লেখা পুরনো file কি Unicode করা যাবে?</summary><p>হ্যাঁ। SutonnyMJ / বিজয়ের লেখা Unicode-এ রূপান্তর করে নিকস বা সোলায়মানলিপি ফন্টে সাজাই, যুক্তবর্ণ ও বানান মিলিয়ে দেখি। প্রথম ২০ পৃষ্ঠা ফ্রি।</p></details>
-    <details><summary>কত দিনে পাব? Urgent হলে?</summary><p>সাধারণত 24–72 ঘণ্টা; বড় report-এ file দেখে তারিখ লিখে দিই। Urgent লাগলে +30–40% চার্জে আগে দিই। দেরি হলে ২০% টাকা ফেরত।</p></details>
-    <details><summary>File কীভাবে পাঠাব?</summary><p>WhatsApp-এ সরাসরি, email-এ, অথবা Google Drive link। Word file হলে সবচেয়ে ভালো; PDF বা ছবি থেকেও কাজ করি।</p></details>
-    <details><summary>Do you work with NGOs and INGOs in English?</summary><p>Yes. We format donor reports, annual reports and policy briefs in English and Bangla, following your brand and donor visibility guidelines. Email us for a formal quotation within 24 hours.</p></details>
+    <details><summary>আপনারা কি লিখে দেন?</summary><p>না। শুধু formatting ও presentation design। লেখা আপনার নিজের।</p></details>
+    <details><summary>কত দিনে পাব?</summary><p>সাধারণত 24–72 ঘণ্টা। Urgent হলে +30–40%। দেরি হলে ২০% টাকা ফেরত।</p></details>
+    <details><summary>টাকা কীভাবে দেব?</summary><p>20% advance bKash-এ, preview দেখে বাকিটা। অফিস/NGO: কোটেশন ও বিল দিই।</p></details>
+    <details><summary>আমার guideline মেনে করবেন?</summary><p>হ্যাঁ। Guideline বা আগের approved কপি পাঠান, হুবহু সেই নিয়মে সাজাই।</p></details>
+    <details><summary>English reports for NGOs?</summary><p>Yes — donor reports and decks in English or Bangla, to your brand guidelines.</p></details>
   </div>
 </div></section>
 
 <section id="order" class="order"><div class="wrap">
-  <h2 data-wa="১ মিনিটে দাম জেনে order দিন">৩–৪ মিনিটে order দিন</h2>
-  <p class="lead" data-wa="Chat-এ কাজটা বলুন, সাথে সাথে estimate পাবেন। তারপর WhatsApp-এ file পাঠান — দাম ও তারিখ লিখিতভাবে জানাব।">Service বাছুন, file দিন, সাথে সাথে estimate দেখুন। প্রশ্ন থাকলে সরাসরি WhatsApp করুন।</p>
-  <div class="cta"><button class="btn js-chat" type="button">দাম জানুন ও order দিন</button><a class="btn ghost js-wa" href="#" target="_blank" rel="noopener">WhatsApp-এ কথা বলুন</a></div>
+  <h2>১ মিনিটে দাম জানুন</h2>
+  <div class="cta"><button class="btn js-chat" type="button">Chat শুরু করুন</button><a class="btn ghost js-wa" href="#" target="_blank" rel="noopener">WhatsApp</a></div>
   <ul class="contact">
     <li><a class="js-tel" href="#">01782-761981</a></li>
     <li><a class="js-mail" href="#">formatbdteam@gmail.com</a></li>
     <li><a class="js-fb" href="#">Facebook</a></li>
-    <li>প্রতিদিন 9am – 11pm</li>
   </ul>
   <p id="my-jobs" hidden></p>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <a class="logo" href="./" style="color:#fff"><span class="wm">Format<b>BD</b></span></a>
-  <nav aria-label="Footer"><a href="#samples">Samples</a><a href="#services">Prices</a><a href="#faq">FAQ</a><a href="#order">Contact</a><a class="earn" href="partner.html">Refer &amp; Earn 20%</a></nav>
-  <small>We format and design — we never write your content. · ঢাকা, বাংলাদেশ · © 2026 FormatBD</small>
+  <span>© 2026 FormatBD · ঢাকা · We format, never write your content.</span>
+  <a class="earn" href="partner.html">Refer &amp; Earn 20%</a>
 </div></footer>
 
 <script>
@@ -353,36 +247,31 @@
   set(".js-tel", "tel:+" + C.wa);
   set(".js-mail", "mailto:" + C.email + "?subject=" + encodeURIComponent("Quotation request"));
   set(".js-fb", "https://www.facebook.com/" + C.fb);
-  // ORDER_LIVE = false until the order backend (Edge Function + Apps Script) is deployed:
-  // every link to order.html opens WhatsApp instead, with the package name filled in
+  // ORDER_LIVE = false until the order backend is deployed: options, price rows and buttons open
+  // the chat assistant (assets/chat.js) instead of order.html; WhatsApp if the chat hasn't loaded
   const ORDER_LIVE = false;
-  if (!ORDER_LIVE) {
-    // price rows + chat buttons open the chat assistant (assets/chat.js); WhatsApp if it hasn't loaded
-    document.addEventListener("click", e => {
-      const a = e.target.closest('a[href^="order.html"], .js-chat');
-      if (!a) return;
-      e.preventDefault();
-      const pkg = a.dataset.pkg || (a.getAttribute("href") || "").split("pkg=")[1] || "";
-      if (window.fbdChat) window.fbdChat.open(pkg);
-      else window.open(waLink("আসসালামু আলাইকুম, FormatBD — একটি order দিতে চাই।"), "_blank");
-    });
-    document.querySelectorAll("[data-wa]").forEach(el => el.textContent = el.dataset.wa);
-    document.querySelectorAll("[data-wa-hide]").forEach(el => el.hidden = true);
-  }
-  // partner links: ?ref=CODE is remembered for C.cookieDays days; order.html fills it in, so a customer who comes back later still credits the partner
+  if (!ORDER_LIVE) document.addEventListener("click", e => {
+    const a = e.target.closest('a[href^="order.html"], .js-chat');
+    if (!a) return;
+    e.preventDefault();
+    const pkg = a.dataset.svc ? "svc:" + a.dataset.svc : (a.getAttribute("href") || "").split("pkg=")[1] || "";
+    if (window.fbdChat) window.fbdChat.open(pkg);
+    else window.open(waLink("আসসালামু আলাইকুম, FormatBD — একটি order দিতে চাই।"), "_blank");
+  });
+  // partner links: ?ref=CODE is remembered for C.cookieDays days
   const store = { get: k => { try { return JSON.parse(localStorage.getItem(k)); } catch (x) { return null; } },
                   set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (x) {} } };
   const urlRef = (new URLSearchParams(location.search).get("ref") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12);
   if (urlRef) store.set("fbd_ref", { code: urlRef, t: Date.now() });
-  // orders placed from this browser → links back to their job pages
-  const mine = store.get("fbd_jobs") || [], mj = document.getElementById("my-jobs");
   // samples: Report / Presentation tabs + before/after sliders
   document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
     document.querySelectorAll(".tabs button").forEach(x => { const on = x === b; x.setAttribute("aria-selected", on); document.getElementById(x.getAttribute("aria-controls")).hidden = !on; });
   }));
   document.querySelectorAll(".cmp input").forEach(r => r.addEventListener("input", () => r.parentNode.style.setProperty("--p", r.value + "%")));
+  // orders placed from this browser → links back to their job pages
+  const mine = store.get("fbd_jobs") || [], mj = document.getElementById("my-jobs");
   if (mine.length) { mj.hidden = false; mj.innerHTML = "আপনার order: " + mine.slice(0, 5).map(j => `<a href="job.html?t=${encodeURIComponent(j.token)}">${String(j.id).replace(/[<>&"]/g, "")}</a>`).join(" · "); }
 </script>
-<script type="module" src="assets/chat.js?v=4"></script>
+<script type="module" src="assets/chat.js?v=5"></script>
 </body>
 </html>

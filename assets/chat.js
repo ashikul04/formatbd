@@ -276,7 +276,9 @@ form.addEventListener("submit", e => { e.preventDefault(); const v = inp.value; 
 function open(pkg) {
   box.hidden = false; btn.hidden = true; tease.hidden = true;
   try { sessionStorage.setItem("fc_seen", "1"); } catch (e) {}
-  if (pkg && PK[pkg]) { opts.innerHTML = ""; if (!started) bot("আসসালামু আলাইকুম! আমি FormatBD-এর assistant।"); started = true; S = {}; choose(pkg); }
+  const svc = /^svc:/.test(pkg || "") && pkg.slice(4);
+  if (svc) { opts.innerHTML = ""; if (!started) bot("আসসালামু আলাইকুম! আমি FormatBD-এর assistant।"); started = true; S = {}; pickSeg(svc); }
+  else if (pkg && PK[pkg]) { opts.innerHTML = ""; if (!started) bot("আসসালামু আলাইকুম! আমি FormatBD-এর assistant।"); started = true; S = {}; choose(pkg); }
   else if (!started) { started = true; menu(); }
   if (!matchMedia("(max-width:560px)").matches) setTimeout(() => inp.focus(), 50);
 }
